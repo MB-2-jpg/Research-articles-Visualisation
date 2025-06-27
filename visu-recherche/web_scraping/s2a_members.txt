@@ -1,0 +1,152 @@
+Members and Topics:
+
+Member 1 : Roland Badeau
+Topics : machine learning, data decomposition, machine listening, MIR
+Member 2 : Pascal Bianchi
+Topics : stochastic optimization
+Member 3 : Philippe Ciblat
+Topics : graphs, reinforcement learning, distributed processing
+Member 4 : Stephan Clémençon S2A team coordinator
+Topics : machine learning, probability, statistics
+Member 5 : Florence d'Alché-Buc
+Topics : machine learning, interpretable and robust AI, kernel methods, structured prediction
+Member 6 : Slim Essid
+Topics : representation learning, multiview learning, multimodal processing, speech processing, machine listening, MIR
+Member 7 : Olivier Fercoq
+Topics : optimization, stochastic algorithms, convex analysis
+Member 8 : Pavlo Mozharovskyi
+Topics : data detph, statistics, machine learning
+Member 9 : Geoffroy Peeters
+Topics : machine learning, machine listening, MIR
+Member 10 : Gaël Richard
+Topics : machine listening, MIR, machine learning, data decomposition, representation learning,
+Member 11 : François Roueff
+Topics : time series, statistics
+Member 12 : Maria Boritchev
+Topics : computational linguistics
+Member 13 : Radu Dragomir
+Topics : optimization, theory of machine learning
+Member 14 : Mathieu Fontaine
+Topics : Bayesian methods, denoising, signal models, source separation, speech processing
+Member 15 : Ekhiñe Irurozki
+Topics : machine learning, rankings, preferences
+Member 16 : Yann Issartel
+Topics : mathematical statistics and machine learning
+Member 17 : Hicham Janati
+Topics : optimal transport, machine learning
+Member 18 : Ons Jelassi
+Topics : distributed computing, large-scale data analysis
+Member 19 : Matthieu Labeau
+Topics : natural language processing, machine learning
+Member 20 : Charlotte Laclau
+Topics : machine learning, fairness, graphs
+Member 21 : Laurence Likforman-Sulem
+Topics : machine learning, handwriting analysis and recognition
+Member 22 : Yves Grenier
+Topics : machine listening, MIR
+Member 23 : Manvi Agarwal
+Topics : machine learning, MIR
+Member 24 : Isaia Andrenacci
+Topics : machine learning for optical networks
+Member 25 : Louis Bahrman
+Topics : deep learning, machine learning, machine listening, speech processing
+Member 26 : Clémentine Berger
+Topics : deep learning,
+Member 27 : Alicia Breidenstein
+Topics : natural language processing
+Member 28 : Morgan Buisson
+Topics : MIR, deep learning, representation learning
+Member 29 : Arturo Castellanos
+Topics : (robust) statistics
+Member 30 : Jean-Rémy Conti
+Topics : fairness, computer vision
+Member 31 : Louise Davy
+Topics : bias and fairness in machine learning
+Member 32 : Anton Emelchenkov
+Topics : signal models, deep learning
+Member 33 : Ikhlas Enaieh
+Topics : machine learning, optimization
+Member 34 : Antonin Gagneré
+Topics : deep learning, representation learning, MIR
+Member 35 : Qi Gan
+Topics : human pose estimation, explainable ai
+Member 36 : Joël Garde
+Topics : optimization, optimal transport, inverse problems
+Member 37 : Benoît Giniès
+Topics : deep learning, representation learning, MIR
+Member 38 : Gabriel Gros
+Topics : optimization, optimal control, machine learning
+Member 39 : Elio Gruttadauria
+Topics : speech processing,
+Member 40 : Elie Kadoche
+Topics : reinforcement learning
+Member 41 : Paul Krzakala
+Topics : optimal transports, graphs, deep learning
+Member 42 : Victor Letzelter
+Topics : Bayesian methods, representation learning, machine learning
+Member 43 : Sicheng Mao
+Topics : speech processing
+Member 44 : Lilian Marey
+Topics : machine learning, fairness, graphs
+Member 45 : Gabriel Melo
+Topics : Graph Supervised Learning, Optimal Transport, Kernel Methods
+Member 46 : Victor Priser
+Topics : stochastic optimization
+Member 47 : Côme Peladeau
+Topics : deep learning, MIR
+Member 48 : David Perera
+Topics : deep learning, machine listening, representation learning
+Member 49 : Mathilde Perez
+Topics : machine learning, fairness, graphs
+Member 50 : Aurian Quélennec
+Topics : representation learning, deep learning, MIR,
+Member 51 : Alain Riou
+Topics : MIR, representation learning, deep learning
+Member 52 : Thomas Serre
+Topics : 
+Member 53 : Romain Therezien
+Topics : Fairness, Explainable AI, Computer Vision
+Member 54 : Bernardo Torres
+Topics : deep learning, machine learning, representation learning,
+Member 55 : Anna van Elst
+Topics : machine learning, robustness, graphs
+Member 56 : Iyad Walwil
+Topics : optimization, stopping criteria
+Member 57 : Junjie Yang
+Topics : structured prediction; optimal transport; kernel methods
+Member 58 : Wen Yang
+Topics : machine learning, point process, time series
+Member 59 : Salah Zaiem
+Topics : speech processing, representation learning, machine learning, deep learning
+Member 60 : Xuanyu Zhuang
+Topics : 
+Member 61 : Xiaoyu Bie
+Topics : deep learning
+Member 62 : James Cheshire
+Topics : reinforcement learning, ranking
+Member 63 : Carlos Fernández
+Topics : machine learning, probability, statistics
+Member 64 : Théo Mariotte
+Topics : deep learning, machine listening, speech processing
+Member 65 : Michel Olvera
+Topics : deep learning, machine listening
+Member 66 : Sibsankar Singha
+Topics : statistics and probability theory
+Member 67 : Changhong Wang
+Topics : deep learning, machine listening, MIR
+Member 68 : Pierre Chouteau
+Topics : deep learning, machine listening
+Member 69 : Joris Cosentino
+Topics : source separation, speech processing, deep learning,
+Member 70 : Maxime Coutant
+Topics : 
+Member 71 : José Gil
+Topics : machine learning, MIR
+Member 72 : Vishal Nagarajan
+Topics : deep learning, machine listening
+Member 73 : Ignacio Laurenty
+Topics : machine learning
+Member 74 : Quoc Duong Nguyen
+Topics : deep learning, machine listening
+Member 75 : Paraskevas Stamatiadis
+Topics : speech processing,

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analyse en correspondance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("/static/background3.png");
+
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      margin: 100px auto;
+      width: 500px;
+      border-radius: 10px;
+    }
+
+    label, input, button {
+      display: block;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .keywords label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Visualisation Données S2A</h2>
+
+    <label for="startYear">Année début :</label>
+    <input type="number" id="startYear" name="startYear" min="1900" max="2100" required>
+
+    <label for="endYear">Année fin :</label>
+    <input type="number" id="endYear" name="endYear" min="1900" max="2100" required>
+
+    <div class="keywords">
+      <p>Mots-clés :</p>
+      <label><input type="checkbox" class="keyword-checkbox" value="deep learning"> Deep Learning</label>
+      <label><input type="checkbox" class="keyword-checkbox" value="detection"> Detection algorithms</label>
+      <label><input type="checkbox" class="keyword-checkbox" value="speech"> Speech processing</label>
+      <label><input type="checkbox" class="keyword-checkbox" value="language"> Natural language processing</label>
+      <label><input type="checkbox" class="keyword-checkbox" value="statistics"> Statistics</label>
+      <label><input type="checkbox" class="keyword-checkbox" value="vision"> Computer Vision</label>
+      <label><input type="checkbox" class="keyword-checkbox" value="optimisation"> Optimisation</label>
+    </div>
+   <div class="auteurs">
+      <p>Auteurs</p>
+      <label><input type="checkbox" class="author-checkbox" value="Roland Badeau"> Roland Badeau</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Pascal Bianchi"> "Pascal Bianchi"</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Philippe Ciblat"> Philippe Ciblat</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Stephan Clémençon"> Stephan Clémençon</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Florence d'Alché-Buc"> Florence d'Alché-Buc</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Slim Essid"> Slim Essid</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Olivier Fercoq"> Olivier Fercoq</label>
+      <label><input type="checkbox" class="author-checkbox" value="Pavlo Mozharovskyi"> Pavlo Mozharovskyi</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Geoffroy Peeters"> "Geoffroy Peeters"</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Gaël Richard"> Gaël Richard</label>
+      <label><input type="checkbox" class="author-checkbox"  value="François Roueff"> François Roueff</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Maria Boritchev"> Maria Boritchev</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Radu Dragomir"> Radu Dragomir</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Mathieu Fontaine"> Mathieu Fontaine</label>
+      <label><input type="checkbox" class="author-checkbox" value="Ekhiñe Irurozki"> Ekhiñe Irurozki</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Yann Issartel"> "Yann Issartel"</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Philippe Ciblat"> Philippe Ciblat</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Stephan Clémençon"> Stephan Clémençon</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Hicham Janati"> Hicham Janati</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Ons Jelassi"> Ons Jelassi</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Matthieu Labeau"> Matthieu Labeau</label>
+      <label><input type="checkbox" class="author-checkbox" value="Pavlo Mozharovskyi"> Pavlo Mozharovskyi</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Geoffroy Peeters"> "Geoffroy Peeters"</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Charlotte Laclau"> Charlotte Laclau</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Laurence Likforman-Sulem"> Laurence Likforman-Sulem</label>
+      <label><input type="checkbox" class="author-checkbox"  value="Yves Grenier"> Yves Grenier</label>
+
+    </div>
+   <button id="visualiserBtn">Graphe des auteurs</button>
+
+   <img id="resultImage3" style="display:block; margin-top:20px; max-width:80%; position: absolute; top: 400px; left: 50px;" />
+
+  
+  </div>
+
+<script>
+    console.log("Script chargé");
+
+    document.getElementById("visualiserBtn").addEventListener("click", function () {
+        console.log("Bouton1 cliqué !");
+        // le reste du code ici...
+    });
+    document.getElementById("visualiserBtn").addEventListener("click", function () {
+    const startYear = document.getElementById("startYear").value;
+    const endYear = document.getElementById("endYear").value;
+
+    const checkboxes = document.querySelectorAll(".keyword-checkbox");
+    const keywords = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+    const checkboxes2 = document.querySelectorAll(".author-checkbox");
+    const authors = Array.from(checkboxes2)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+    fetch("/visualiserGraphe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            start_year: startYear,
+            end_year: endYear,
+            keywords: keywords,
+            authors: authors,
+            visualisation : 1
+        })
+    })
+    .then(response => {
+        if (!response.ok) throw new Error("Erreur serveur");
+        return response.blob();
+    })
+    .then(blob => {
+        const url = URL.createObjectURL(blob);
+        document.getElementById("resultImage").src = url;
+    })
+    .catch(error => {
+        console.error("Erreur :", error);
+    });
+});
+
+</script>
+
+
+</body>
+</html>

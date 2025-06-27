@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paramètres</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .dropdown-menu {
+      max-height: 100px;
+      overflow-y: auto;
+    }
+    .box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      max-width: 600px;
+      margin: auto;
+      margin-top: 40px;
+
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h4 class="mb-4">Paramètres</h4>
+    <form method="POST">
+      <!-- Keywords -->
+      <div class="mb-3">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+            Mots-clés
+          </button>
+          <ul class="dropdown-menu w-100 px-3">
+            {% for k in keywords %}
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="keywords" value="{{ k }}"
+                    {% if selected and k in selected['keywords'] %}checked{% endif %}>
+                  <label class="form-check-label">{{ k }}</label>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Auteurs -->
+      <div class="mb-3">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+            Auteurs
+          </button>
+          <ul class="dropdown-menu w-100 px-3">
+            {% for a in authors %}
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="authors" value="{{ a }}"
+                    {% if selected and a in selected['authors'] %}checked{% endif %}>
+                  <label class="form-check-label">{{ a }}</label>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Années -->
+      <div class="mb-3">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+            Années
+          </button>
+          <ul class="dropdown-menu w-100 px-3">
+            {% for y in years %}
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="years" value="{{ y }}"
+                    {% if selected and y in selected['years'] %}checked{% endif %}>
+                  <label class="form-check-label">{{ y }}</label>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-end mt-4">
+        <button type="submit" class="btn btn-primary">Valider</button>
+      </div>
+    </form>
+
+    {% if selected %}
+    <div class="mt-4">
+      <h6>Résultat sélectionné :</h6>
+      <ul>
+        <li><strong>Mots-clés:</strong> {{ selected['keywords'] }}</li>
+        <li><strong>Auteurs:</strong> {{ selected['authors'] }}</li>
+        <li><strong>Années:</strong> {{ selected['years'] }}</li>
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  {% if show_vis %}
+<div class="container mt-5">
+  <div class="row">
+    
+    <!-- Visualisation complémentaire à gauche (25%) -->
+    <div class="col-md-5 text-center mb-4">
+      <h5>Visualisation Complémentaire</h5>
+      <img src="{{ url_for('static', filename='ma_visualisation.jpg') }}" alt="Autre Visualisation"
+           class="img-fluid border rounded" style="max-height: 800px ; width: 100%;">
+    </div>
+
+    <!-- Visualisation LDA à droite (75%) -->
+
+    <div class="col-md-6 text-center mb-4">
+      <h5>Visualisation LDA</h5>
+      <iframe src="{{ url_for('static', filename='lda_vis.html') }}" width="100%" height="800" style="border: none;"></iframe>
+    </div>
+
+  </div>
+</div>
+
+
+{% endif %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

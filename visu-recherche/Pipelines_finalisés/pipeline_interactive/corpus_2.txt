@@ -1,0 +1,1556 @@
+
+
+
+
+hal_id    :    hal-04762097
+
+
+
+We introduce Annealed Multiple Choice Learning (aMCL) which combines simu-
+lated annealing with MCL. MCL is a learning framework handling ambiguous tasks
+by predicting a small set of plausible hypotheses. These hypotheses are trained
+using the Winner-takes-all (WTA) scheme, which promotes the diversity of the
+predictions. However, this scheme may converge toward an arbitrarily suboptimal
+local minimum, due to the greedy nature of WTA. We overcome this limitation
+using annealing, which enhances the exploration of the hypothesis space during
+training. We leverage insights from statistical physics and information theory
+to provide a detailed description of the model training trajectory. Additionally,
+we validate our algorithm by extensive experiments on synthetic datasets, on the
+standard UCI benchmark, and on speech separation.
+1
+
+
+
+hal_id    :    hal-04768296
+
+
+
+In this paper, we propose a novel Self-Supervised-
+Learning scheme to train rhythm analysis systems and
+instantiate it for few-shot beat tracking.
+Taking inspi-
+ration from the Contrastive Predictive Coding paradigm,
+we propose to train a Log-Mel-Spectrogram-Transformer-
+encoder to contrast observations at times separated by hy-
+pothesized beat intervals from those that are not. We do
+this without the knowledge of ground-truth tempo or beat
+positions, as we rely on the local maxima of a Predomi-
+nant Local Pulse function, considered as a proxy for Tatum
+positions, to define candidate anchors, candidate positives
+(located at a distance of a power of two from the anchor)
+and negatives (remaining time positions). We show that
+a model pre-trained using this approach on the unlabeled
+FMA, MTT and MTG-Jamendo datasets can successfully
+be fine-tuned in the few-shot regime, i.e. with just a few
+annotated examples to get a competitive beat-tracking per-
+formance.
+1
+
+
+
+hal_id    :    hal-04665063
+
+
+
+The task of music structure analysis has been mostly
+addressed as a sequential problem, by relying on the inter-
+nal homogeneity of musical sections or their repetitions.
+In this work, we instead regard it as a pairwise link pre-
+diction task. If for any pair of time instants in a track, one
+can successfully predict whether they belong to the same
+structural entity or not, then the underlying structure can
+be easily recovered. Building upon this assumption, we
+propose a method that first learns to classify pairwise links
+between time frames as belonging to the same section (or
+segment) or not. The resulting link features, along with
+node-specific information, are combined through a graph
+attention network. The latter is regularized with a graph
+partitioning training objective and outputs boundary loca-
+tions between musical segments and section labels. The
+overall system is lightweight and performs competitively
+with previous methods.
+The evaluation is done on two
+standard datasets for music structure analysis and an ab-
+lation study is conducted in order to gain insight on the
+role played by its different components.
+
+
+
+hal_id    :    hal-04695595
+
+
+
+Machine listening systems often rely on fixed taxonomies to or-
+ganize and label audio data, key for training and evaluating deep
+neural networks (DNNs) and other supervised algorithms. How-
+ever, such taxonomies face significant constraints: they are com-
+posed of application-dependent predefined categories, which hin-
+ders the integration of new or varied sounds, and exhibits limited
+cross-dataset compatibility due to inconsistent labeling standards.
+To overcome these limitations, we introduce SALT: Standardized
+Audio event Label Taxonomy. Building upon the hierarchical struc-
+ture of AudioSet’s ontology, our taxonomy extends and standardizes
+labels across 24 publicly available environmental sound datasets, al-
+lowing the mapping of class labels from diverse datasets to a unified
+system. Our proposal comes with a new Python package designed
+for navigating and utilizing this taxonomy, easing cross-dataset la-
+bel searching and hierarchical exploration. Notably, our package
+allows effortless data aggregation from diverse sources, hence easy
+experimentation with combined datasets.
+Index Terms— Machine listening, DCASE, sound taxonomy,
+sound categorization, data aggregation
+
+
+
+hal_id    :    hal-04701759
+
+
+
+Audio-text models trained via contrastive learning offer a practical
+approach to perform audio classiﬁcation through natural language
+prompts, such as “this is a sound of” followed by category names. In
+this work, we explore alternative prompt templates for zero-shot au-
+dio classiﬁcation, demonstrating the existence of higher-performing
+options. First, we ﬁnd that the formatting of the prompts signif-
+icantly affects performance so that simply prompting the models
+with properly formatted class labels performs competitively with
+optimized prompt templates and even prompt ensembling. More-
+over, we look into complementing class labels by audio-centric de-
+scriptions. By leveraging large language models, we generate tex-
+tual descriptions that prioritize acoustic features of sound events
+to disambiguate between classes, without extensive prompt engi-
+neering. We show that prompting with class descriptions leads to
+state-of-the-art results in zero-shot audio classiﬁcation across ma-
+jor ambient sound datasets. Remarkably, this method requires no
+additional training and remains fully zero-shot.
+Index Terms— Zero-shot audio classiﬁcation, audio-text mod-
+els, contrastive language-audio pretraining, in-context learning
+
+
+
+hal_id    :    hal-04720291
+
+
+
+The Prototypical Network (ProtoNet) has emerged as a popular
+choice in Few-shot Learning (FSL) scenarios due to its remark-
+able performance and straightforward implementation.
+Building
+upon such success, we first propose a simple (yet novel) method
+to fine-tune a ProtoNet on the (labeled) support set of the test
+episode of a C-way-K-shot test episode (without using the query
+set which is only used for evaluation). We then propose an algo-
+rithmic framework that combines ProtoNet with optimization-based
+FSL algorithms (MAML and Meta-Curvature) to work with such
+a fine-tuning method. Since optimization-based algorithms endow
+the target learner model with the ability to fast adaption to only a
+few samples, we utilize ProtoNet as the target model to enhance
+its fine-tuning performance with the help of a specifically designed
+episodic fine-tuning strategy. The experimental results confirm that
+our proposed models, MAML-Proto and MC-Proto, combined with
+our unique fine-tuning method, outperform regular ProtoNet by a
+large margin in few-shot audio classification tasks on the ESC-50
+and Speech Commands v2 datasets. We note that although we have
+only applied our model to the audio domain, it is a general method
+and can be easily extended to other domains.
+Index Terms— Few-shot learning, Audio classification, Proto-
+typical Network, Model-Agnostic Meta-Learning, Meta-Curvature
+
+
+
+hal_id    :    hal-04640068
+
+
+
+Single-channel speech dereverberation aims at extracting a
+dry speech signal from a recording affected by the acoustic re-
+flections in a room. However, most current deep learning-based
+approaches for speech dereverberation are not interpretable for
+room acoustics, and can be considered as black-box systems
+in that regard. In this work, we address this problem by regu-
+larizing the training loss using a novel physical coherence loss
+which encourages the room impulse response (RIR) induced by
+the dereverberated output of the model to match the acoustic
+properties of the room in which the signal was recorded. Our
+investigation demonstrates the preservation of the original dere-
+verberated signal alongside the provision of a more physically
+coherent RIR.
+Index Terms: Speech dereverberation, hybrid deep learning,
+room acoustics, acoustic matching, speech processing
+
+
+
+hal_id    :    hal-04705811
+
+
+
+—Latent representation learning has been an active
+field of study for decades in numerous applications. Inspired
+among others by the tokenization from Natural Language
+Processing and motivated by the research of a simple data
+representation, recent works have introduced a quantization step
+into the feature extraction. In this work, we propose a novel
+strategy to build the neural discrete representation by means of
+random codebooks. These codebooks are obtained by randomly
+sampling a large, predefined fixed codebook. We experimentally
+show the merits and potential of our approach in a task of audio
+compression and reconstruction.
+Index Terms—feature extraction, quantization, random code-
+books, audio reconstruction
+
+
+
+hal_id    :    hal-04614241
+
+
+
+—This paper addresses the challenge of estimating
+multiple highly oscillating amplitudes within the nonlinear chirp
+signal model. The problem is analogous to the mode detection
+task with fixed instantaneous frequencies, where the oscillating
+amplitudes signify mechanical vibrations concealing crucial infor-
+mation for predictive maintenance. Existing methods often focus
+on single-frequency estimation, employ simple amplitude func-
+tions, or impose strong noise assumptions. Furthermore, these
+methods frequently rely on arbitrarily chosen hyperparameters,
+leading to sub-optimal generalization for a diverse range of am-
+plitudes. To address these limitations, our approach introduces
+two estimators, based on Capon filters and negative log-likelihood
+approaches respectively, that leverage locally stationary assump-
+tions and incorporate hyperparameters estimation. The results
+demonstrate that, even under challenging conditions, these esti-
+mators yield competitive outcomes across various noisy scenarios,
+mitigating the drawbacks associated with existing methods.
+Index Terms—chirp signal, amplitude estimation, locally sta-
+tionary process, filtering, hyperparameters estimation
+
+
+
+hal_id    :    hal-04541350
+
+
+
+Isolating the desired speaker’s voice amidst multiple
+speakers in a noisy acoustic context is a challenging task. Per-
+sonalized speech enhancement (PSE) endeavours to achieve
+this by leveraging prior knowledge of the speaker’s voice.
+Recent research efforts have yielded promising PSE mod-
+els, albeit often accompanied by computationally intensive
+architectures, unsuitable for resource-constrained embedded
+devices. In this paper, we introduce a novel method to per-
+sonalize a lightweight dual-stage Speech Enhancement (SE)
+model and implement it within DeepFilterNet2, a SE model
+renowned for its state-of-the-art performance. We seek an
+optimal integration of speaker information within the model,
+exploring different positions for the integration of the speaker
+embeddings within the dual-stage enhancement architec-
+ture. We also investigate a tailored training strategy when
+adapting DeepFilterNet2 to a PSE task. We show that our
+personalization method greatly improves the performances
+of DeepFilterNet2 while preserving minimal computational
+overhead.
+Index Terms— Target speech extraction, speech en-
+hancement, real-time.
+
+
+
+hal_id    :    hal-04544157
+
+
+
+Tempo estimation is the task of estimating the periodicity of the
+dominant rhythm pulse of a music audio signal. It has therefore
+a close relationship with dominant pitch estimation. Recently, both
+tasks have been addressed in a Self-Supervised Learning (SSL) fash-
+ion so as to leverage unlabelled data for training. In this work, we
+study the applicability of two successful pitch-based SSL models,
+SPICE and PESTO, for the purpose of tempo estimation. Both suc-
+cessfully exploit Siamese networks with a pitch-shifting view gen-
+eration between the two branches. To apply these models for tempo
+estimation, we represent the audio signal by the Constant-Q trans-
+form (CQT) of its onset-strength-function and adapt their view gen-
+eration using time-stretching (instead of pitch shifting), which is ef-
+ficiently implemented by shifting the CQT. In a large experiment,
+we show that simply adapting PESTO in this way yields superior re-
+sults than the previous SSL approach to tempo estimation for most
+datasets used in the reference benchmark. Further, since PESTO
+is light-weight, requiring only a few training data, we study a new
+learning scheme where the downstream datasets are processed di-
+rectly in a SSL fashion (without access to labels) showing that this
+is an interesting alternative further improving the performance for
+some datasets.
+Index Terms— tempo estimation, self-supervised-learning
+
+
+
+hal_id    :    hal-04358467
+
+
+
+In neural audio signal processing, pitch conditioning has been
+used to enhance the performance of synthesizers. However, jointly
+training pitch estimators and synthesizers is a challenge when us-
+ing standard audio-to-audio reconstruction loss, leading to reliance
+on external pitch trackers. To address this issue, we propose us-
+ing a spectral loss function inspired by optimal transportation theory
+that minimizes the displacement of spectral energy. We validate this
+approach through an unsupervised autoencoding task that fits a har-
+monic template to harmonic signals. We jointly estimate the funda-
+mental frequency and amplitudes of harmonics using a lightweight
+encoder and reconstruct the signals using a differentiable harmonic
+synthesizer. The proposed approach offers a promising direction for
+improving unsupervised parameter estimation in neural audio appli-
+cations.
+Index Terms— differentiable signal processing, machine learn-
+ing, optimal transport, frequency estimation
+
+
+
+hal_id    :    hal-04360221
+
+
+
+Current state-of-the-art audio analysis systems rely on pre-
+trained embedding models, often used off-the-shelf as (frozen)
+feature extractors. Choosing the best one for a set of tasks is the
+subject of many recent publications.
+However, one aspect often
+overlooked in these works is the influence of the duration of audio
+input considered to extract an embedding, which we refer to as Tem-
+poral Support (TS). In this work, we study the influence of the TS
+for well-established or emerging pre-trained embeddings, chosen to
+represent different types of architectures and learning paradigms.
+We conduct this evaluation using both musical instrument and envi-
+ronmental sound datasets, namely OpenMIC, TAU Urban Acoustic
+Scenes 2020 Mobile, and ESC-50. We especially highlight that Au-
+dio Spectrogram Transformer-based systems (PaSST and BEATs)
+remain effective with smaller TS, which therefore allows for a dras-
+tic reduction in memory and computational cost.
+Moreover, we
+show that by choosing the optimal TS we reach competitive results
+across all tasks. In particular, we improve the state-of-the-art results
+on OpenMIC, using BEATs and PaSST without any fine-tuning.
+Index Terms— audio embeddings, acoustic scene classification,
+instrument recognition, temporal support, transformers
+
+
+
+hal_id    :    hal-04539329
+
+
+
+Blind Estimation of Audio Effects (BE-AFX) aims at estimating the
+audio effects (AFXs) applied to an original, unprocessed audio sam-
+ple solely based on the processed audio sample. To train such a
+system traditional approaches optimize a loss between ground truth
+and estimated AFX parameters. This involves knowing the exact
+implementation of the AFXs used for the process. In this work, we
+propose an alternative solution that eliminates the requirement for
+knowing this implementation. Instead, we introduce an auto-encoder
+approach, which optimizes an audio quality metric. We explore, sug-
+gest, and compare various implementations of commonly used mas-
+tering AFXs, using differential signal processing or neural approx-
+imations. Our findings demonstrate that our auto-encoder approach
+yields superior estimates of the audio quality produced by a chain of
+AFXs, compared to the traditional parameter-based approach, even
+if the latter provides a more accurate parameter estimation.
+Index Terms— audio effects, differentiable digital signal pro-
+cessing, neural proxy, deep learning
+
+
+
+hal_id    :    hal-04419041
+
+
+
+Overlapped speech is notoriously problematic for speaker diarization
+systems. Consequently, the use of speech separation has recently
+been proposed to improve their performance. Although promising,
+speech separation models struggle with realistic data because they
+are trained on simulated mixtures with a fixed number of speakers. In
+this work, we introduce a new speech separation-guided diarization
+scheme suitable for the online speaker diarization of long meeting
+recordings with a variable number of speakers, as present in the AMI
+corpus. We envisage ConvTasNet and DPRNN as alternatives for the
+separation networks, with two or three output sources. To obtain the
+speaker diarization result, voice activity detection is applied on each
+estimated source. The final model is fine-tuned end-to-end, after first
+adapting the separation to real data using AMI. The system operates
+on short segments, and inference is performed by stitching the local
+predictions using speaker embeddings and incremental clustering.
+The results show that our system improves the state-of-the-art on
+the AMI headset mix, using no oracle information and under full
+evaluation (no collar and including overlapped speech). Finally, we
+show the strength of our system particularly on overlapped speech
+sections.
+Index Terms— online speaker diarization, source separation,
+overlapped speech, AMI, speaker embedding
+
+
+
+hal_id    :    hal-04432659
+
+
+
+Music generated by deep learning methods often suffers
+from a lack of coherence and long-term organization. Yet,
+multi-scale hierarchical structure is a distinctive feature of
+music signals. To leverage this information, we propose a
+structure-informed positional encoding framework for music
+generation with Transformers. We design three variants in
+terms of absolute, relative and non-stationary positional in-
+formation. We comprehensively test them on two symbolic
+music generation tasks: next-timestep prediction and accom-
+paniment generation.
+As a comparison, we choose multi-
+ple baselines from the literature and demonstrate the merits
+of our methods using several musically-motivated evaluation
+metrics. In particular, our methods improve the melodic and
+structural consistency of the generated pieces.
+Index Terms— symbolic music generation, Transform-
+ers, music structure, positional encoding
+
+
+
+hal_id    :    hal-04260042
+
+
+
+In this paper, we address the problem of pitch estimation
+using Self Supervised Learning (SSL). The SSL paradigm
+we use is equivariance to pitch transposition, which en-
+ables our model to accurately perform pitch estimation on
+monophonic audio after being trained only on a small un-
+labeled dataset. We use a lightweight (< 30k parameters)
+Siamese neural network that takes as inputs two differ-
+ent pitch-shifted versions of the same audio represented
+by its Constant-Q Transform. To prevent the model from
+collapsing in an encoder-only setting, we propose a novel
+class-based transposition-equivariant objective which cap-
+tures pitch information. Furthermore, we design the archi-
+tecture of our network to be transposition-preserving by
+introducing learnable Toeplitz matrices.
+We evaluate our model for the two tasks of singing voice
+and musical instrument pitch estimation and show that our
+model is able to generalize across tasks and datasets while
+being lightweight, hence remaining compatible with low-
+resource devices and suitable for real-time applications. In
+particular, our results surpass self-supervised baselines and
+narrow the performance gap between self-supervised and
+supervised methods for pitch estimation.
+
+
+
+hal_id    :    hal-04216177
+
+
+
+Self-Supervised Learning (SSL) has allowed leveraging large
+amounts of unlabeled speech data to improve the perfor-
+mance of speech recognition models even with small annotated
+datasets.
+Despite this, speech SSL representations may fail
+while facing an acoustic mismatch between the pretraining and
+target datasets. To address this issue, we propose a novel super-
+vised domain adaptation method, designed for cases exhibiting
+such a mismatch in acoustic domains. It consists in applying
+properly calibrated data augmentations on a large clean dataset,
+bringing it closer to the target domain, and using it as part of
+an initial fine-tuning stage. Augmentations are automatically
+selected through the minimization of a conditional-dependence
+estimator, based on the target dataset. The approach is vali-
+dated during an oracle experiment with controlled distortions
+and on two amateur-collected low-resource domains, reaching
+better performances compared to the baselines in both cases.
+Index Terms: self-supervised learning, domain adaptation.
+
+
+
+hal_id    :    hal-04048829
+
+
+
+Due to their performances, deep neural networks have emerged as
+a major method in nearly all modern audio processing applications.
+Deep neural networks can be used to estimate some parameters or
+hyperparameters of a model, or in some cases the entire model in
+an end-to-end fashion. Although deep learning can lead to state of
+the art performances, they also suffer from inherent weaknesses as
+they usually remain complex and non interpretable to a large extent.
+For instance, the internal filters used in each layers are chosen in
+an adhoc manner with only a loose relation with the nature of the
+processed signal. We propose in this paper an approach to learn in-
+terpretable filters within a specific neural architecture which allow
+to better understand the behaviour of the neural network and to re-
+duce its complexity. We validate the approach on a task of speech
+enhancement and show that the gain in interpretability does not de-
+grade the performance of the model.
+Index Terms— Representation learning, interpretability, speech
+enhancement
+
+
+
+hal_id    :    hal-04126067
+
+
+
+Athlete’s pose acquisition and analysis is promising to provide coaches with details of athletes
+performance and thus help to improve athletes’ performances with more detailed supervision from
+coaches. Compared with traditional ways of acquiring an athlete's gesture, such as using wearable
+sensors, computer vision technology has advantages of low-cost, high-efficient and non-intrusive.
+This paper aims to bridge these two fields, by reconstructing athletes’ trajectory using monocular
+(i.e. single-camera-shot) videos. Under a few assumptions that are applicable to most of the sports
+of athletics, we proposed a method combining computer vision techniques and physics laws to
+reconstruct athletes’ trajectories from monocular videos. The method first estimates 3D pose of
+athletes from video inputs, then performs kinematic analysis on estimated poses to reconstruct the
+trajectories of athletes. We tested this algorithm on videos from the triple jump finals of the 2016
+Olympics in Rio de Janeiro. We achieved a best performance with 9.1% mean average error when
+using ground-truth foot-ground contact signal and 21.4% mean average error when using predicted
+foot-ground contact signal.
+
+
+
+hal_id    :    hal-03782827
+
+
+
+Invariance-based learning is a promising approach in deep learning.
+Among other benefits, it can mitigate the lack of diversity of avail-
+able datasets and increase the interpretability of trained models. To
+this end, practitioners often use a consistency cost penalizing the
+sensitivity of a model to a set of carefully selected data augmen-
+tations. However, there is no consensus about how these augmen-
+tations should be selected. In this paper, we study the behavior
+of several augmentation strategies. We consider the task of sound
+event detection and classification for our experiments. In particular,
+we show that transformations operating on the internal layers of a
+deep neural network are beneficial for this task.
+Index Terms— sound event detection, data augmentation, ad-
+versarial learning
+
+
+
+hal_id    :    hal-03671851
+
+
+
+In the stress-energy tensor formalism, the symmetry between absorption and scattering coefﬁcients, as proven
+by measurements combined with simulations, is counter-intuitive. By introducing the wall admittance, we
+show that the scattering coefﬁcient is partly created by the real part of the wall admittance combined with the
+active intensity, that is, is partly due to absorption. However, it also depends on the imaginary part of the wall
+admittance in combination with the reactive intensity, which confers it genuine scattering properties. In the case
+of plane waves impinging on planar boundary, the admittance formalism shows that reactive intensity vanishes
+in directions parallel to the wall; when the source is at ﬁnite distance from the wall, a residual reactive intensity
+subsists. However, for curved boundaries, the velocity in directions parallel to the wall is no longer proportional
+to the pressure, and scattering occurs.
+Keywords: Energy density, Sound intensity, Absorption coefﬁcient, Scattering coefﬁcient, Wall admittance
+1
+
+
+
+hal_id    :    hal-03817736
+
+
+
+Contrastive learning enables learning useful audio and speech
+representations without ground-truth labels by maximizing the
+similarity between latent representations of similar signal seg-
+ments. In this framework various data augmentation techniques
+are usually exploited to help enforce desired invariances within
+the learned representations, improving performance on various
+audio tasks thanks to more robust embeddings. Now, selecting
+the most relevant augmentations has proven crucial for better
+downstream performances. Thus, this work introduces a condi-
+tional independance-based method which allows for automati-
+cally selecting a suitable distribution on the choice of augmenta-
+tions and their parametrization from a set of predefined ones, for
+contrastive self-supervised pre-training. This is performed with
+respect to a downstream task of interest, hence saving a costly
+hyper-parameter search. Experiments performed on two differ-
+ent downstream tasks validate the proposed approach showing
+better results than experimenting without augmentation or with
+baseline augmentations. We furthermore conduct a qualitative
+analysis of the automatically selected augmentations and their
+variation according to the considered final downstream dataset.
+Index Terms: self-supervised learning, data augmentation.
+
+
+
+hal_id    :    hal-03759647
+
+
+
+– The use of parameterized audio encoders has proven to be an encouraging avenue for improving the interpretability and performance
+of end-to-end source separation models. We present properties of interest needed to learn the filters of these encoders ; and propose a param-
+eterization to constrain these filters. Based on the Hilbert transform and the Bedrosian theorem, we propose to construct a set of phase-shifted
+filters by modulating sinusoids through freely learned low-pass filters. These filters allow to obtain invariances for time shifts, phase shifts while
+avoiding the use of complex neural networks thanks to a trick of over-parameterization of the phase for a given waveform.
+1
+
+
+
+hal_id    :    hal-04276012
+
+
+
+In this paper, we present the process we used in order to collect new annotations of opinions over the multimodal corpus
+SEMAINE composed of dyadic interactions. The dataset had already been annotated continuously in two affective dimensions
+related to the emotions: Valence and Arousal.
+We annotated the part of SEMAINE called Solid SAL composed of 79
+interactions between a user and an operator playing the role of a virtual agent designed to engage a person in a sustained,
+emotionally colored conversation. We aligned the audio at the word level using the available high-quality manual transcriptions.
+The annotated dataset contains 5627 speech turns for a total of 73,944 words, corresponding to 6 hours 20 minutes of dyadic
+interactions. Each interaction has been labeled by three annotators at the speech turn level following a three-step process. This
+method allows us to obtain a precise annotation regarding the opinion of a speaker. We obtain thus a dataset dense in opinions,
+with more than 48% of the annotated speech turns containing at least one opinion. We then propose a new baseline for the
+detection of opinions in interactions improving slightly a state of the art model with RoBERTa embeddings. The obtained
+results on the database are promising with a F1-score at 0.72.
+Keywords: Opinion, Multimodal Machine Learning, Interactions
+1.
+
+
+
+hal_id    :    hal-03708610
+
+
+
+The use of a parameterized encoders or audio front-ends has
+shown promises in improving the interpretability of time do-
+main single-channel source separation models such as Conv-
+TasNet. This type of ﬁlters also allows a potential reduction
+of the computational cost since larger encoder ﬁlters can be
+used. In this work, we propose to build a new parameteri-
+zation of such encoder ﬁlter-bank which allows gaining in-
+terpretability while keeping ﬂexibility. Based on the Hilbert
+transform and the Bedrosian theorem, we propose to build
+phase-shifted set of ﬁlters by modulating sinusoids through
+freely learned low pass ﬁlters. We show that the use of these
+ﬁlters allows to keep the same performances when using small
+ﬁlters and even improve them when using large ﬁlters.
+Index Terms— Audio source separation, audio ﬁlterbank
+
+
+
+hal_id    :    hal-03559398
+
+
+
+No abstract found in the PDF.
+
+
+
+hal_id    :    hal-03537148
+
+
+
+The concept of median/consensus has been
+widely investigated in order to provide a sta-
+tistical summary of ranking data, i.e.
+re-
+alizations of a random permutation Σ of a
+ﬁnite set, {1, . . . , n} with n ≥1 say. As it
+sheds light onto only one aspect of Σ’s dis-
+tribution P, it may neglect other informative
+features. It is the purpose of this paper to
+deﬁne analogues of quantiles, ranks and sta-
+tistical procedures based on such quantities
+for the analysis of ranking data by means of a
+metric-based notion of depth function on the
+symmetric group. Overcoming the absence
+of vector space structure on Sn, the latter
+deﬁnes a center-outward ordering of the per-
+mutations in the support of P and extends
+the classic metric-based formulation of con-
+sensus ranking (medians corresponding then
+to the deepest permutations). The axiomatic
+properties that ranking depths should ideally
+possess are listed, while computational and
+generalization issues are studied at length.
+Beyond the theoretical analysis carried out,
+the relevance of the novel concepts and meth-
+ods introduced for a wide variety of statistical
+tasks are also supported by numerous numer-
+ical experiments.
+1
+
+
+
+hal_id    :    hal-03330800
+
+
+
+Recommending automatically a video given a music or a
+music given a video has become an important asset for the
+audiovisual industry - with user-generated or professional
+content. While both music and video have speciﬁc tempo-
+ral organizations, most current works do not consider those
+and only focus on globally recommending a media. As a
+ﬁrst step toward the improvement of these recommenda-
+tion systems, we study in this paper the relationship be-
+tween music and video temporal organization. We do this
+for the case of ofﬁcial music videos, with a quantitative and
+a qualitative approach. Our assumption is that the move-
+ment in the music are correlated to the ones in the video.
+To validate this, we ﬁrst interview a set of internationally
+recognized music video experts. We then perform a large-
+scale analysis of ofﬁcial music-video clips (which we man-
+ually annotated into video genres) using MIR description
+tools (downbeats and functional segments estimation) and
+Computer Vision tools (shot detection). Our study con-
+ﬁrms that a "language of music-video clips" exists; i.e. ed-
+itors favor the co-occurrence of music and video events us-
+ing strategies such as anticipation. It also highlights that
+the amount of co-occurrence depends on the music and
+video genres.
+
+
+
+hal_id    :    hal-03349734
+
+
+
+Despite the success of end-to-end approaches, chroma (or
+pitch-class) features remain a useful mid-level represen-
+tation of music audio recordings due to their direct in-
+terpretability. Since traditional chroma variants obtained
+with signal processing suffer from timbral artifacts such
+as overtones or vibrato, they do not directly reflect the
+pitch classes notated in the score. For this reason, train-
+ing a chroma representation using deep learning (“deep
+chroma”) has become an interesting strategy.
+Existing
+approaches involve the use of supervised learning with
+strongly aligned labels for which, however, only few
+datasets are available. Recently, the Connectionist Tempo-
+ral Classification (CTC) loss, initially proposed for speech,
+has been adopted to learn monophonic (single-label) pitch-
+class features using weakly aligned labels based on corre-
+sponding score–audio segment pairs. To exploit this strat-
+egy for the polyphonic case, we propose the use of a multi-
+label variant of this CTC loss, the MCTC, and formal-
+ize this loss for the pitch-class scenario. Our experiments
+demonstrate that the weakly aligned approach achieves al-
+most equivalent pitch-class estimates than training with
+strongly aligned annotations. We then study the sensitivity
+of our approach to segment duration and mismatch. Fi-
+nally, we compare the learned features with other pitch-
+class representations and demonstrate their use for chord
+and local key recognition on classical music datasets.
+
+
+
+hal_id    :    hal-03298695
+
+
+
+In various audio signal processing applications, such as source sepa-
+ration and dereverberation, accurate mathematical modeling of both
+source signals and room reverberation is needed to properly describe
+the audio data. In a previous paper, we introduced a stochastic room
+impulse response model based on the image source principle, and
+we proposed an expectation-maximization algorithm that was able
+to eﬃciently estimate the model parameters in various experimental
+settings. This paper aims to extend the model in order to account for
+the dependency of the exponential decay over frequency, due to the
+walls usually absorbing less energy at low frequencies than at high
+frequencies. Our experimental results show that this reﬁnement of
+the model is able to generate realistic room impulse responses, that
+are perceptively very close to the original ones.
+Index Terms— Reverberation, room impulse response, prob-
+abilistic modeling, expectation-maximization algorithm, artiﬁcial
+reverberation.
+
+
+
+hal_id    :    hal-03255349
+
+
+
+Estimating mixtures of damped chirp sinusoids in noise is a
+problem that affects audio analysis, coding, and synthesis appli-
+cations. Phase-based non-stationary parameter estimators assume
+that sinusoids can be resolved in the Fourier transform domain,
+whereas high-resolution methods estimate superimposed compo-
+nents with accuracy close to the theoretical limits, but only for
+sinusoids with constant frequencies. We present a new method
+for estimating the parameters of superimposed damped chirps that
+has an accuracy competitive with existing non-stationary estima-
+tors but also has a high-resolution like subspace techniques. Af-
+ter providing the analytical expression for a Gaussian-windowed
+damped chirp signal’s Fourier transform, we propose an efficient
+variational EM algorithm for nonlinear Bayesian regression that
+jointly estimates the amplitudes, phases, frequencies, chirp rates,
+and decay rates of multiple non-stationary components that may be
+obfuscated under the same local maximum in the frequency spec-
+trum. Quantitative results show that the new method not only has
+an estimation accuracy that is close to the Cramér-Rao bound, but
+also a high resolution that outperforms the state-of-the-art.
+
+
+
+hal_id    :    hal-03208323
+
+
+
+—In this work, we study music/video cross-
+modal recommendation, i.e. recommending a music track
+for a video or vice versa. We rely on a self-supervised
+learning paradigm to learn from a large amount of
+unlabelled data. We rely on a self-supervised learning
+paradigm to learn from a large amount of unlabelled
+data. More precisely, we jointly learn audio and video
+embeddings by using their co-occurrence in music-video
+clips. In this work, we build upon a recent video-music
+retrieval system (the VM-NET), which originally relies on
+an audio representation obtained by a set of statistics
+computed over handcrafted features. We demonstrate
+here that using audio representation learning such as the
+audio embeddings provided by the pre-trained MuSimNet,
+OpenL3, MusicCNN or by AudioSet, largely improves rec-
+ommendations. We also validate the use of the cross-modal
+triplet loss originally proposed in the VM-NET compared
+to the binary cross-entropy loss commonly used in self-
+supervised learning. We perform all our experiments using
+the Music Video Dataset (MVD).
+
+
+
+hal_id    :    hal-02985794
+
+
+
+Speech separation with several speakers is a challenging task be-
+cause of the non-stationarity of the speech and the strong signal
+similarity between interferent sources. Current state-of-the-art so-
+lutions can separate well the different sources using sophisticated
+deep neural networks which are very tedious to train. When several
+microphones are available, spatial information can be exploited to
+design much simpler algorithms to discriminate speakers. We pro-
+pose a distributed algorithm that can process spatial information in
+a spatially unconstrained microphone array. The algorithm relies on
+a convolutional recurrent neural network that can exploit the signal
+diversity from the distributed nodes. In a typical case of a meeting
+room, this algorithm can capture an estimate of each source in a ﬁrst
+step and propagate it over the microphone array in order to increase
+the separation performance in a second step. We show that this ap-
+proach performs even better when the number of sources and nodes
+increases. We also study the inﬂuence of a mismatch in the number
+of sources between the training and testing conditions.
+Index Terms— Speech separation, microphone arrays, dis-
+tributed processing.
+
+
+
+hal_id    :    hal-02366337
+
+
+
+Although Adam is a very popular algorithm for optimizing the weights of neural networks,
+it has been recently shown that it can diverge even in simple convex optimization examples.
+Several variants of Adam have been proposed to circumvent this convergence issue. In
+this work, we study the Adam algorithm for smooth nonconvex optimization under a
+boundedness assumption on the adaptive learning rate. The bound on the adaptive step size
+depends on the Lipschitz constant of the gradient of the objective function and provides safe
+theoretical adaptive step sizes. Under this boundedness assumption, we show a novel ﬁrst
+order convergence rate result in both deterministic and stochastic contexts. Furthermore,
+we establish convergence rates of the function value sequence using the Kurdyka- Lojasiewicz
+property.
+Keywords: Nonconvex optimization, Adaptive gradient methods, Kurdyka- Lojasiewicz
+inequality.
+
+
+
+hal_id    :    hal-03127155
+
+
+
+. Tempo and genre are two inter-leaved aspects of music, gen-
+res are often associated to rhythm patterns which are played in speciﬁc
+tempo ranges. In this paper, we focus on the recent Deep Rhythm sys-
+tem based on a harmonic representation of rhythm used as an input to
+a convolutional neural network. To consider the relationships between
+frequency bands, we process complex-valued inputs through complex-
+convolutions. We also study the joint estimation of tempo/genre using a
+multitask learning approach. Finally, we study the addition of a second
+input branch to the system based on a VGG-like architecture applied to
+a mel-spectrogram input. This multi-input approach allows to improve
+the performances for tempo and genre estimation.
+Keywords: Tempo estimation, genre classiﬁcation, deep-learning, com-
+plex network, multitask, multi-input.
+1
+
+
+
+hal_id    :    hal-03200161
+
+
+
+Informed source separation has recently gained re-
+newed interest with the
+
+
+
+hal_id    :    hal-02932485
+
+
+
+Various audio signal processing applications, such as source
+separation and dereverberation, require an accurate mathematical
+modeling of the input audio data. In the literature, many works
+have focused on source signal modeling, while the reverberation
+model is often kept very simplistic.
+This paper aims to investigate a stochastic room impulse re-
+sponse model presented in a previous article: this model is first
+adapted to discrete time, then we propose a parametric estimation
+algorithm, that we evaluate experimentally. Our results show that
+this algorithm is able to efficiently estimate the model parameters,
+in various experimental settings (various signal-to-noise ratios and
+absorption coefficients of the room walls).
+
+
+
+hal_id    :    hal-02932836
+
+
+
+The generalized linear bandit framework has at-
+tracted a lot of attention in recent years by ex-
+tending the well-understood linear setting and
+allowing to model richer reward structures.
+It
+notably covers the logistic model, widely used
+when rewards are binary. For logistic bandits,
+the frequentist regret guarantees of existing al-
+gorithms are ˜O(κ
+√
+T), where κ is a problem-
+dependent constant. Unfortunately, κ can be ar-
+bitrarily large as it scales exponentially with the
+size of the decision set. This may lead to sig-
+niﬁcantly loose regret bounds and poor empirical
+performance. In this work, we study the logis-
+tic bandit with a focus on the prohibitive depen-
+dencies introduced by κ. We propose a new op-
+timistic algorithm based on a ﬁner examination
+of the non-linearities of the reward function. We
+show that it enjoys a ˜O(
+√
+T) regret with no de-
+pendency in κ, but for a second order term. Our
+analysis is based on a new tail-inequality for self-
+normalized martingales, of independent interest.
+
+
+
+hal_id    :    hal-02477242
+
+
+
+Most music streaming services rely on automatic recommendation
+algorithms to exploit their large music catalogs. These algorithms
+aim at retrieving a ranked list of music tracks based on their similar-
+ity with a target music track. In this work, we propose a method for
+direct recommendation based on the audio content without explicitly
+tagging the music tracks. To that aim, we propose several strategies
+to perform triplet mining from ranked lists. We train a Convolutional
+Neural Network to learn the similarity via triplet loss. These differ-
+ent strategies are compared and validated on a large-scale experiment
+against an auto-tagging based approach. The results obtained high-
+light the efﬁciency of our system, especially when associated with
+an Auto-pooling layer.
+Index Terms— audio music similarity, deep learning, triplet
+loss, triplet mining.
+
+
+
+hal_id    :    hal-02389159
+
+
+
+Multichannel processing is widely used for speech enhancement but
+several limitations appear when trying to deploy these solutions in
+the real world. Distributed sensor arrays that consider several de-
+vices with a few microphones is a viable solution which allows for
+exploiting the multiple devices equipped with microphones that we
+are using in our everyday life. In this context, we propose to extend
+the distributed adaptive node-speciﬁc signal estimation approach to
+a neural network framework. At each node, a local ﬁltering is per-
+formed to send one signal to the other nodes where a mask is esti-
+mated by a neural network in order to compute a global multichan-
+nel Wiener ﬁlter. In an array of two nodes, we show that this addi-
+tional signal can be leveraged to predict the masks and leads to better
+speech enhancement performance than when the mask estimation re-
+lies only on the local signals.
+Index Terms— Speech enhancement, microphone arrays, dis-
+tributed processing.
+
+
+
+hal_id    :    hal-02457075
+
+
+
+Speech separation quality can be improved by exploiting textual
+information. However, this usually requires text-to-speech align-
+ment at phoneme level. Classical alignment methods are made for
+rather clean speech and do not work as well on corrupted speech.
+We propose to perform text-informed speech-music separation and
+phoneme alignment jointly using recurrent neural networks and the
+attention mechanism.
+We show that it leads to beneﬁts for both
+tasks. In experiments, phoneme transcripts are used to improve the
+perceived quality of separated speech over a non-informed baseline.
+Moreover, our novel phoneme alignment method based on the at-
+tention mechanism achieves state-of-the-art alignment accuracy on
+clean and on heavily corrupted speech.
+Index Terms— Speech separation, phoneme alignment, atten-
+tion, informed source separation
+
+
+
+hal_id    :    hal-02456643
+
+
+
+We present a Bayesian ﬁlter for state space models with Laplace-
+distributed observation noise that is robust to heavy-tailed and
+outlier-ridden univariate time-series data. We analytically derive a
+closed-form expression of the exact posterior for a Laplace likeli-
+hood conditioned on a Gaussian prior. Posterior statistics are prop-
+agated forward in time by a proxy Gaussian density. The forward
+Kullback-Leibler divergence from the posterior to the Gaussian
+is minimized by matching their moments. The proposed method
+supports both linear and non-linear systems, and has a fast recur-
+sive structure analogous to the Kalman ﬁlter that enables online
+inference. Results show that the new method outperforms existing
+approximate inference methods, especially in challenging scenarios
+where the system’s parameters are uncertain.
+Index Terms— heavy-tailed noise, Kalman ﬁlter, state estima-
+tion, Laplace distribution, Bayesian inference
+
+
+
+hal_id    :    hal-02448917
+
+
+
+Data-driven models for audio source separation such
+as U-Net or Wave-U-Net are usually models dedicated to
+and speciﬁcally trained for a single task, e.g. a particu-
+lar instrument isolation. Training them for various tasks at
+once commonly results in worse performances than train-
+ing them for a single specialized task. In this work, we
+introduce the Conditioned-U-Net (C-U-Net) which adds
+a control mechanism to the standard U-Net. The control
+mechanism allows us to train a unique and generic U-Net
+to perform the separation of various instruments. The C-
+U-Net decides the instrument to isolate according to a one-
+hot-encoding input vector. The input vector is embedded
+to obtain the parameters that control Feature-wise Linear
+Modulation (FiLM) layers. FiLM layers modify the U-Net
+feature maps in order to separate the desired instrument via
+afﬁne transformations. The C-U-Net performs different in-
+strument separations, all with a single model achieving the
+same performances as the dedicated ones at a lower cost.
+
+
+
+hal_id    :    hal-02457735
+
+
+
+Automatic cover detection – the task of ﬁnding in an au-
+dio database all the covers of one or several query tracks
+– has long been seen as a challenging theoretical problem
+in the MIR community and as an acute practical problem
+for authors and composers societies. Original algorithms
+proposed for this task have proven their accuracy on small
+datasets, but are unable to scale up to modern real-life au-
+dio corpora. On the other hand, faster approaches designed
+to process thousands of pairwise comparisons resulted in
+lower accuracy, making them unsuitable for practical use.
+In this work, we propose a neural network architecture
+that is trained to represent each track as a single embed-
+ding vector. The computation burden is therefore left to
+the embedding extraction – that can be conducted ofﬂine
+and stored, while the pairwise comparison task reduces to
+a simple Euclidean distance computation. We further pro-
+pose to extract each track’s embedding out of its dominant
+melody representation, obtained by another neural network
+trained for this task. We then show that this architecture
+improves state-of-the-art accuracy both on small and large
+datasets, and is able to scale to query databases of thou-
+sands of tracks in a few seconds.
+
+
+
+hal_id    :    hal-02457638
+
+
+
+It has been shown that the harmonic series at the tempo
+frequency of the onset-strength-function of an audio sig-
+nal accurately describes its rhythm pattern and can be used
+to perform tempo or rhythm pattern estimation. Recently,
+in the case of multi-pitch estimation, the depth of the input
+layer of a convolutional network has been used to represent
+the harmonic series of pitch candidates. We use a similar
+idea here to represent the harmonic series of tempo candi-
+dates. We propose the Harmonic-Constant-Q-Modulation
+which represents, using a 4D-tensors, the harmonic se-
+ries of modulation frequencies (considered as tempo fre-
+quencies) in several acoustic frequency bands over time.
+This representation is used as input to a convolutional net-
+work which is trained to estimate tempo or rhythm pattern
+classes. Using a large number of datasets, we evaluate the
+performance of our approach and compare it with previous
+approaches. We show that it slightly increases Accuracy-1
+for tempo estimation but not the average-mean-Recall for
+rhythm pattern recognition.
+
+
+
+hal_id    :    hal-02943462
+
+
+
+In the last few years, several datasets have been released
+to meet the requirements of “hungry” yet promising data-
+driven approaches in music technology research. Since,
+for historical reasons, most investigations conducted in the
+ﬁeld still revolve around music of the so-called “West-
+ern” tradition, the corresponding data, methodology and
+conclusions carry a strong cultural bias. Music of non-
+“Western” background, whenever present, is usually un-
+derrepresented, poorly labeled, or even mislabeled, the
+exception being projects that aim at speciﬁcally describ-
+ing such music. In this paper we present SAMBASET,
+a dataset of Brazilian samba music that contains over
+40 hours of historical and modern samba de enredo com-
+mercial recordings. To the best of our knowledge, this is
+the ﬁrst dataset of this genre. We describe the collection of
+metadata (e.g. artist, composer, release date) and outline
+our semiautomatic approach to the challenging task of an-
+notating beats in this large dataset, which includes the as-
+sessment of the performance of state-of-the-art beat track-
+ing algorithms for this speciﬁc case. Finally, we present
+a study on tempo and beat tracking that illustrates SAM-
+BASET’s value, and we comment on other tasks for which
+it could be used.
+
+
+
+hal_id    :    hal-02280472
+
+
+
+Prior information about the target source can improve audio
+source separation quality but is usually not available with the nec-
+essary level of audio alignment. This has limited its usability in
+the past. We propose a separation model that can nevertheless ex-
+ploit such weak information for the separation task while aligning
+it on the mixture as a byproduct using an attention mechanism. We
+demonstrate the capabilities of the model on a singing voice separa-
+tion task exploiting artiﬁcial side information with different levels
+of expressiveness. Moreover, we highlight an issue with the com-
+mon separation quality assessment procedure regarding parts where
+targets or predictions are silent and reﬁne a previous contribution
+for a more complete evaluation.
+Index Terms— informed source separation, singing voice sep-
+aration, weak labels, attention, separation evaluation
+
+
+
+hal_id    :    hal-02051399
+
+
+
+Machine learning and game theory are known to exhibit a
+very strong link as they mutually provide each other with so-
+lutions and models allowing to study and analyze the optimal
+behaviour of a set of agents. In this paper, we take a closer
+look at a special class of games, known as fair cost sharing
+games, from a machine learning perspective. We show that
+this particular kind of games, where agents can choose be-
+tween selﬁsh behaviour and cooperation with shared costs,
+has a natural link to several machine learning scenarios in-
+cluding collaborative learning with homogeneous and het-
+erogeneous sources of data. We further demonstrate how the
+game-theoretical results bounding the ratio between the best
+Nash equilibrium (or its approximate counterpart) and the op-
+timal solution of a given game can be used to provide the up-
+per bound of the gain achievable by the collaborative learn-
+ing expressed as the expected risk and the sample complexity
+for homogeneous and heterogeneous cases, respectively. We
+believe that the established link can spur many possible fu-
+ture implications for other learning scenarios as well, with
+privacy-aware learning being among the most noticeable ex-
+amples.
+
+
+
+hal_id    :    hal-02457728
+
+
+
+—Estimation of dominant melody in polyphonic music
+remains a difﬁcult task, even though promising breakthroughs
+have been done recently with the
+
+
+
+hal_id    :    hal-02019103
+
+
+
+Estimating the main melody of a polyphonic audio record-
+ing remains a challenging task. We approach the task from
+a classiﬁcation perspective and adopt a convolutional re-
+current neural network (CRNN) architecture that relies on
+a particular form of pretraining by source-ﬁlter nonneg-
+ative matrix factorisation (NMF). The source-ﬁlter NMF
+decomposition is chosen for its ability to capture the pitch
+and timbre content of the leading voice/instrument, pro-
+viding a better initial pitch salience than standard time-
+frequency representations. Starting from such a musically
+motivated representation, we propose to further enhance
+the NMF-based salience representations with CNN lay-
+ers, then to model the temporal structure by an RNN net-
+work and to estimate the dominant melody with a ﬁnal
+classiﬁcation layer. The results show that such a system
+achieves state-of-the-art performance on the MedleyDB
+dataset without any augmentation methods or large train-
+ing sets.
+
+
+
+hal_id    :    hal-01795319
+
+
+
+—In the ﬁeld of room acoustics, it is well known that
+reverberation can be characterized statistically in a particular
+region of the time-frequency domain (after the transition time
+and above Schroeder’s frequency). Since the 1950s, various
+formulas have been established, focusing on particular aspects of
+reverberation: exponential decay over time, correlations between
+frequencies, correlations between sensors at each frequency,
+and time-frequency distribution. In this paper, we introduce a
+new stochastic reverberation model, that permits us to retrieve
+all these well-known results within a common mathematical
+framework. To the best of our knowledge, this is the ﬁrst time
+that such a uniﬁcation work is presented. The beneﬁts are
+multiple: several new formulas generalizing the classical results
+are established, that jointly characterize the spatial, temporal
+and spectral properties of late reverberation.
+Index Terms—Reverberation, room impulse response, room
+frequency response, stochastic models, Poisson processes, station-
+ary processes, Wigner distribution.
+
+
+
+hal_id    :    lirmm-01766795
+
+
+
+. This paper introduces a new method for multichannel speech
+enhancement based on a versatile modeling of the residual noise spec-
+trogram. Such a model has already been presented before in the single
+channel case where the noise component is assumed to follow an alpha-
+stable distribution for each time-frequency bin, whereas the speech spec-
+trogram, supposed to be more regular, is modeled as Gaussian. In this
+paper, we describe a multichannel extension of this model, as well as
+a Monte Carlo Expectation - Maximisation algorithm for parameter es-
+timation. In particular, a multichannel extension of the Itakura-Saito
+nonnegative matrix factorization is exploited to estimate the spectral
+parameters for speech, and a Metropolis-Hastings algorithm is proposed
+to estimate the noise contribution. We evaluate the proposed method in
+a challenging multichannel denoising application and compare it to other
+state-of-the-art algorithms.
+1
+
+
+
+hal_id    :    hal-04267897
+
+
+
+—Historical documents present many challenges
+for ofﬂine handwriting recognition systems, among them, the
+segmentation and labeling steps. Carefully annotated text-
+lines are needed to train an HTR system. In some scenarios,
+transcripts are only available at the paragraph level with no
+text-line information. In this work, we demonstrate how to
+train an HTR system with few labeled data. Speciﬁcally, we
+train a deep convolutional recurrent neural network (CRNN)
+system on only 10% of manually labeled text-line data from a
+dataset and propose an incremental training procedure that
+covers the rest of the data. Performance is further increased
+by augmenting the training set with specially crafted multi-
+scale data. We also propose a model-based normalization
+scheme which considers the variability in the writing scale at
+the recognition phase. We apply this approach to the publicly
+available READ dataset1. Our system achieved the second
+best result during the ICDAR2017 competition [1].
+Keywords-CRNN, handwriting recognition, historical docu-
+ments, variability, multi-scale training, model-based normal-
+ization scheme, limited labeled data
+
+
+
+hal_id    :    hal-01548508
+
+
+
+This paper introduces a new method for single-channel denoising
+that sheds new light on classical early developments on this topic
+that occurred in the 70’s and 80’s with Wiener ﬁltering and spectral
+subtraction. Operating both in the short-time Fourier transform
+domain, these methods consist in estimating the power spectral
+density (PSD) of the noise without speech. Then, the clean speech
+signal is obtained by manipulating the corrupted time-frequency
+bins thanks to these noise PSD estimates. Theoretically grounded
+when using power spectra, these methods were subsequently gener-
+alized to magnitude spectra, or shown to yield better performance
+by weighting the PSDs in the so-called parameterized Wiener ﬁlter.
+Both these strategies were long considered ad-hoc. To the best
+of our knowledge, while we recently proposed an interpretation
+of magnitude processing, there is still no theoretical result that
+would justify the better performance of parameterized Wiener
+ﬁlters. Here, we show how the α-stable probabilistic model for
+waveforms naturally leads to these weighted ﬁlters and we provide
+a grounded and fast algorithm to enhance corrupted audio that
+compares favorably with classical denoising methods.
+Index Terms—denoising, Wiener ﬁltering, α-stable processes, prob-
+ability theory
+
+
+
+hal_id    :    hal-01840082
+
+
+
+–
+Dans de nombreux domaines tels que la ﬁnance, la géophysique ou les neurosciences, les données se présentent
+sous la forme de séries temporelles multivariées. Un enjeu de l’analyse statistique est de prendre en compte cet aspect multivarié,
+notamment en raison de phénomènes de phase pouvant être induits par la présence de longue mémoire. Les ondelettes analytiques
+sont un outil adapté à ce cadre d’étude. Nous nous intéressons ainsi aux ondelettes quasi-analytiques introduites par Selesnick.
+Nous montrons tout d’abord leur existence et nous explicitons ensuite leur qualité analytique. Nous illustrons enﬁn l’avantage de
+l’utilisation de ces ondelettes dans un cas simple de processus multivariés à longue mémoire.
+Abstract – Multivariate processes with long-range dependent properties are found in a large number of applications including
+ﬁnance, geophysics and neuroscience. Statistical analysis of such data is challenging because multivariate time series present phase
+phenomenons. Analytic wavelets are well suited to deal with these characteristics. Our starting point is a paper of Selesnick which
+introduces quasi-analytic wavelets. We ﬁrst establish the existence of these wavelets. We also give an exact formula quantifying
+their analytic quality. We then illustrate on simulations the relevance of quasi-analytic wavelets for multivariate time series analysis.
+1
+
+
+
+hal_id    :    hal-01540479
+
+
+
+– La transformée de Mellin est probablement la transformation intégrale la plus méconnue mais aussi une des plus fondamentales dans
+de nombreux domaines. Sa genèse a été fort longue, et il est difﬁcile de donner une référence précise de son
+
+
+
+hal_id    :    hal-01531252
+
+
+
+In this paper, we focus on the problem of sound source localization
+and we propose a technique that exploits the known and arbitrary
+geometry of the microphone array. While most probabilistic tech-
+niques presented in the past rely on Gaussian models, we go further
+in this direction and detail a method for source localization that is
+based on the recently proposed α-stable harmonizable processes.
+They include Cauchy and Gaussian as special cases and their
+remarkable feature is to allow a simple modeling of impulsive
+and real world sounds with few parameters. The approach we
+present builds on the classical convolutive mixing model and has
+the particularities of requiring going through the data only once,
+to also work in the underdetermined case of more sources than
+microphones and to allow massively parallelizable implementations
+operating in the time-frequency domain. We show that the method
+yields interesting performance for acoustic imaging in realistic
+simulations.
+Index Terms—source localization, acoustic modeling, α-
+stable random variables, spectral measure, sketching
+
+
+
+hal_id    :    hal-01618447
+
+
+
+Many applications ﬁelds deal with multivariate long-memory time series. A challenge is to estimate the
+long-memory properties together with the coupling between the time series. Real wavelets procedures
+present some limitations due to the presence of phase phenomenons. A perspective is to use analytic
+wavelets to recover jointly long-memory properties, modulus of long-run covariance between time series
+and phases. Approximate wavelets Hilbert pairs of Selesnick (2002) fullﬁlled some of the required prop-
+erties. As an extension of Selesnick (2002)’s work, we present some results about existence and quality of
+these approximately analytic wavelets.
+Keywords: Complex wavelets, multivariate time series
+
+
+
+hal_id    :    hal-01401988
+
+
+
+. We propose a probabilistic model for acoustic source local-
+ization with known but arbitrary geometry of the microphone array. The
+approach has several features. First, it relies on a simple nearﬁeld acous-
+tic model for wave propagation. Second, it does not require the number
+of active sources. On the contrary, it produces a heat map representing
+the energy of a large set of candidate locations, thus imaging the acous-
+tic ﬁeld. Second, it relies on a heavy-tail α-stable probabilistic model,
+whose most important feature is to yield an estimation strategy where
+the multichannel signals need to be processed only once in a simple on-
+line procedure, called sketching. This sketching produces a ﬁxed-sized
+representation of the data that is then analyzed for localization. The
+resulting algorithm has a small computational complexity and in this
+paper, we demonstrate that it compares favorably with state of the art
+for localization in realistic simulations of reverberant environments.
+1
+
+
+
+hal_id    :    hal-01400965
+
+
+
+. In this paper, we consider the underdetermined convolutive
+audio source separation (UCASS) problem. In the STFT domain, we con-
+sider both source signals and mixing ﬁlters as latent random variables,
+and we propose to estimate each source image, i.e. each individual source-
+ﬁlter product, by its posterior mean. Although, this is a quite straightfor-
+ward application of the Bayesian estimation theory, to our knowledge,
+there exist no similar study in the UCASS context. In this paper, we
+discuss the interest of this estimator in this context and compare it with
+the conventional Wiener ﬁlter in a semi-oracle conﬁguration.3
+Keywords: Audio source separation, source image, latent mixing ﬁlters,
+MMSE estimator, MCMC sampling.
+1
+
+
+
+hal_id    :    hal-01497087
+
+
+
+— The V˜u-Condat algorithm is a standard method
+for ﬁnding a saddle point of a Lagrangian involving a dif-
+ferentiable function. Recent works have tried to adapt the
+idea of random coordinate descent to this algorithm, with
+the aim to efﬁciently solve some regularized or distributed
+optimization problems. A drawback of these approaches is
+that the admissible step sizes can be small, leading to slow
+convergence. In this paper, we introduce a coordinate descent
+primal-dual algorithm which is provably convergent for a wider
+range of step size values than previous methods. In particular,
+the condition on the step-sizes depends on the coordinate-wise
+Lipschitz constant of the differentiable function’s gradient. We
+discuss the application of our method to distributed optimiza-
+tion and large scale support vector machine problems.
+
+
+
+hal_id    :    hal-01248014
+
+
+
+We propose a projection-based method for the unmixing of multi-
+channel audio signals into their different constituent spatial objects.
+Here, spatial objects are modelled using a uniﬁed framework which
+handles both point sources and diffuse sources. We then propose
+a novel methodology to estimate and take advantage of the spatial
+dependencies of an object. Where previous research has processed
+the original multichannel mixtures directly and has been principally
+focused on the use of inter-channel covariance structures, here we
+instead process projections of the multichannel signal on many
+different spatial directions. These linear combinations consist of
+observations where some spatial objects are cancelled or enhanced.
+We then propose an algorithm which takes these projections as
+the observations, discarding dependencies between them. Since
+each one contains global information regarding all channels of the
+original multichannel mixture, this provides an effective means of
+learning the parameters of the original audio, while avoiding the
+need for joint-processing of all the channels. We further show how
+to recover the separated spatial objects and demonstrate the use of
+the technique on stereophonic music signals.
+Index Terms—Sound Source Separation, α-stable, Spatial
+Projection
+
+
+
+hal_id    :    hal-01170924
+
+
+
+Nonnegative matrix factorization (NMF) is an effective and popular
+low-rank model for nonnegative data. It enjoys a rich background,
+both from an optimization and probabilistic signal processing view-
+point. In this study, we propose a new cost-function for NMF ﬁtting,
+which is introduced as arising naturally when adopting a Cauchy
+process model for audio waveforms. As we recall, this Cauchy
+process model is the only probabilistic framework known to date
+that is compatible with having additive magnitude spectrograms
+for additive independent audio sources. Similarly to the Gaussian
+power-spectral density, this Cauchy model features time-frequency
+nonnegative scale parameters, on which an NMF structure may be
+imposed. The Cauchy cost function we propose is optimal under
+that model in a maximum likelihood sense. It thus appears as
+an interesting newcomer in the inventory of useful cost-functions
+for NMF in audio. We provide multiplicative updates for Cauchy-
+NMF and show that they give good performance in audio source
+separation as well as in extracting nonnegative low-rank structures
+from data buried in very adverse noise.
+Index Terms—NMF, audio, Cauchy distribution, robust esti-
+mation, probabilistic modeling
+
+
+
+hal_id    :    hal-01110035
+
+
+
+In this paper, we propose a new method for singing voice detec-
+tion based on a Bidirectional Long Short-Term Memory (BLSTM)
+Recurrent Neural Network (RNN). This classiﬁer is able to take a
+past and future temporal context into account to decide on the pres-
+ence/absence of singing voice, thus using the inherent sequential
+aspect of a short-term feature extraction in a piece of music. The
+BLSTM-RNN contains several hidden layers, so it is able to extract a
+simple representation ﬁtted to our task from low-level features. The
+results we obtain signiﬁcantly outperform state-of-the-art methods
+on a common database.
+Index Terms— Singing Voice Detection, Deep Learning, Re-
+current Neural Networks, Long Short-Term Memory
+
+
+
+hal_id    :    hal-01110028
+
+
+
+In the recent years, many studies have focused on the single-
+sensor separation of independent waveforms using so-called soft-
+masking strategies, where the short term Fourier transform of
+the mixture is multiplied element-wise by a ratio of spectrogram
+models. When the signals are wide-sense stationary, this strategy
+is theoretically justiﬁed as an optimal Wiener ﬁltering: the power
+spectrograms of the sources are supposed to add up to yield the
+power spectrogram of the mixture. However, experience shows that
+using fractional spectrograms instead, such as the amplitude, yields
+good performance in practice, because they experimentally better
+ﬁt the additivity assumption. To the best of our knowledge, no
+probabilistic interpretation of this ﬁltering procedure was available
+to date. In this paper, we show that assuming the additivity of frac-
+tional spectrograms for the purpose of building soft-masks can be
+understood as separating locally stationary α-stable harmonizable
+processes, α-harmonizable in short, thus justifying the procedure
+theoretically.
+Index Terms—audio source separation, probability theory,
+harmonizable processes, α-stable random variables, soft-masks

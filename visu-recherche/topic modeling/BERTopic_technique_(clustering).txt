@@ -1,0 +1,19 @@
+BERTopic est une technique de modélisation de sujets qui combine les capacités de BERT (Bidirectional Encoder Representations from Transformers) 
+avec c-TF-IDF (Class-based Term Frequency-Inverse Document Frequency) pour créer des représentations thématiques de documents. 
+
+D'abord oon réalise l'"Embeddings", ce qui consiste à représenter les documents sous forme de vecteurs.
+ Les modèles de langage transforment les phrases en vecteurs numériques dans un espace sémantique. 
+Des documents proches en sens seront proches dans cet espace.
+On peut utiliser un modèle préentraîné de type BERT via la librairie sentence-transformers.
+
+On procède ensuite à une réduction de dimension (celle des vecteurs), car ceux obtenue avec la méthode 
+de l'embeddings sont de trop grande dimension. On doit alors les réduire dans un espace plus simple (2 à 10 dimensions).
+Pour cela on utilise l'algorithme UMAP  (Uniform Manifold Approximation and Projection), un algorithme non-linéaire qui réduit bien les dimensions
+ tout en conservant les relations de voisinage.
+
+
+Une fois la réduction faite, On peut regrouper les documents similaires en "topics".
+On va alors utiliser un algorithme de clustering hiérarchique basé sur la densité
+
+
+Pour finir on identifie les mots-clés de chaque topic pour ensuite en faire une visualisation.

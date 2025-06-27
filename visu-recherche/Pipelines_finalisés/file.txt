@@ -1,0 +1,247 @@
+En analyse mathématique, les séries de Fourier sont un outil fondamental dans l'étude des fonctions périodiques . C'est à partir de ce concept que s'est développée la branche des mathématiques connue sous le nom d' analyse harmonique .
+
+Un signal périodique de fréquence et de forme quelconque peut être obtenu en ajoutant à une sinusoïde de fréquence (fondamentale) des sinusoïdes dont les fréquences sont des multiples entiers de . Ces signaux ont des amplitudes et des positions de phase appropriées.
+
+De même, on peut décomposer toute onde récurrente en une somme de sinusoïdes (fondamentale et harmoniques).
+
+L'étude d'une fonction périodique par les séries de Fourier comprend deux volets :
+
+Au-delà du problème de la décomposition, la théorie des séries de Fourier établit une correspondance entre la fonction périodique et les coefficients de Fourier. De ce fait, l'analyse de Fourier peut être considérée comme une nouvelle façon de décrire les fonctions périodiques.
+Des opérations telles que la dérivation s'écrivent simplement en partant des coefficients de Fourier. La construction d'une fonction périodique solution d'une équation fonctionnelle peut se ramener à la construction des coefficients de Fourier correspondants.
+
+Les séries de Fourier ont été introduites par Joseph Fourier en 1822, mais il a fallu un siècle pour que les analystes dégagent les outils d'étude adaptés : une théorie de l' intégrale pleinement satisfaisante et les premiers concepts de l' analyse fonctionnelle . Elles font encore actuellement l'objet de recherches actives pour elles-mêmes et ont suscité plusieurs branches nouvelles : analyse harmonique , théorie du signal , ondelettes , etc.
+
+Les séries de Fourier se rencontrent dans la décomposition de signaux périodiques, dans l'étude des courants électriques, des ondes cérébrales , dans la synthèse sonore , le traitement d'images , etc.
+
+Soient une fonction de dans et un réel strictement positif. On dit que est - périodique (ou périodique de période ) si :
+
+S'il existe une plus petite période , elle est appelée la période de (et son inverse est appelé la fréquence de ).
+
+Par exemple, si est un réel strictement positif, les fonctions sinusoïdales :
+
+sont périodiques de période , et, à fortiori, -périodiques.
+
+La somme, le produit ou le quotient de deux fonctions périodiques de période est encore une fonction périodique de période .
+
+Par ailleurs, l'intégrale entre et d'une fonction périodique de période ne dépend pas de l'origine . Aussi note-t-on l'intégrale de sur une période
+
+Une combinaison linéaire de ces fonctions sinusoïdales élémentaires porte le nom de polynôme trigonométrique et constitue aussi une fonction -périodique. Elle peut se réécrire comme combinaison linéaire de fonctions :
+
+L'emploi des nombres complexes et de la fonction exponentielle permet de simplifier les notations, grâce à la formule d'Euler :
+
+Un polynôme trigonométrique s'écrit donc sous la forme :
+
+où les coefficients sont presque tous nuls et peuvent être obtenus par la formule :
+
+On cherche à isoler dans la définition du polynôme trigonométrique :
+
+Soit :
+
+En intégrant sur :
+
+Par linéarité de l'intégrale, et, selon les hypothèses de convergence :
+
+Comme les intégrales sont nulles pour tout différent de , il reste :
+
+L'idée sous-jacente à l'introduction des séries de Fourier est de pouvoir obtenir une fonction -périodique, par exemple continue, comme somme de fonctions sinusoïdales :
+
+avec les coefficients , appelés coefficients de Fourier de , définis par :
+
+Il s'agit d'une somme infinie, c'est-à-dire d'une limite de somme finie, ce qui correspond au concept de somme de série .
+
+De nombreux calculs se traduisent de façon très simple sur les coefficients des polynômes trigonométriques, comme le calcul de dérivée. Il est possible de les généraliser au niveau des coefficients de Fourier généraux.
+
+Au sens strict, la formule de décomposition n'est pas correcte en général. Elle l'est, ponctuellement, sous de bonnes hypothèses de régularité portant sur . Alternativement, on peut lui donner sens en se plaçant dans les bons espaces fonctionnels .
+
+Les séries de Fourier constituent la branche la plus ancienne de l' analyse harmonique , mais n'en demeurent pas moins un domaine vivant, aux nombreuses questions ouvertes. L'étude de leurs particularités est allée de pair, pendant tout le e siècle, avec les progrès de la théorie de l' intégration .
+
+[Information douteuse] au début du e siècle chez Brook Taylor . C'est l'ouvrage de ce dernier, Methodus Incrementorum Directa et Inversa , paru en 1715 , qui donne le coup d'envoi à l'étude systématique des cordes vibrantes et de la propagation du son , thème de recherche majeur pendant tout le siècle.
+
+Une controverse éclate dans les années 1750 entre d'Alembert , Euler et Daniel Bernoulli sur le problème des cordes vibrantes. D'Alembert détermine l' équation d'onde et ses solutions analytiques. Bernoulli les obtient également, sous forme de décomposition en série trigonométrique. La controverse porte sur la nécessité de concilier ces points de vue avec les questions de régularité des solutions. Selon J.-P. Kahane 1 , elle aura un rôle majeur dans la genèse des séries de Fourier.
+
+Bernoulli avait introduit des séries trigonométriques dans le problème des cordes vibrantes pour superposer des solutions élémentaires.
+
+Joseph Fourier introduit l' équation de la chaleur dans un premier mémoire en 1807 2 qu'il complète et présente en 1811 pour le Grand prix de mathématiques . Ces premiers travaux, controversés sur le plan de l'analyse, ne sont pas publiés. En 1822 , Fourier expose les séries et la transformation de Fourier dans son traité Théorie analytique de la chaleur . Il énonce qu'une fonction peut être décomposée sous forme de série trigonométrique, et qu'il est facile de prouver la convergence de celle-ci. Il juge même toute hypothèse de continuité inutile 3 .
+
+En 1829 , Dirichlet donne un premier énoncé correct de convergence limité aux fonctions périodiques continues par morceaux ne possédant qu'un nombre fini d'extrema. Dirichlet considérait que les autres cas s'y ramenaient ; l'erreur sera corrigée par Jordan en 1881.
+
+En 1848 , Henry Wilbraham est le premier à mettre en évidence le phénomène de Gibbs en s'intéressant au comportement des séries de Fourier au voisinage des points de discontinuité.
+
+Le Mémoire sur les séries trigonométriques de Bernhard Riemann , publié en 1867 4 , constitue une avancée décisive. L'auteur lève un obstacle majeur en définissant pour la première fois une théorie de l' intégration satisfaisante. Il démontre notamment que les coefficients de Fourier ont une limite nulle à l'infini , et un résultat de convergence connu comme le théorème de sommabilité de Riemann.
+
+Georg Cantor publie une série d'articles sur les séries trigonométriques entre 1870 et 1872 , où il démontre son théorème d'unicité . Cantor raffine ses résultats en recherchant des « ensembles d'unicité », pour lesquels son théorème reste vérifié. C'est l'origine de l'introduction de la théorie des ensembles .
+
+En 1873 , du Bois-Reymond donne le premier exemple de fonction continue périodique dont la série de Fourier diverge en un point 5 . Le dernier quart du e siècle voit relativement peu d'avancées dans le domaine des séries de Fourier ou de l'analyse réelle en général, alors que l' analyse complexe connaît une progression rapide.
+
+Dans une note de 1900 et dans un article de 1904 , Fejér démontre son théorème de convergence uniforme utilisant le procédé de sommation de Cesàro ( moyenne arithmétique des sommes partielles de Fourier). Surtout, il dégage un principe nouveau : l'association systématique entre régularisation au moyen d'un « noyau » et procédé de sommation pour la série de Fourier.
+
+Henri Lebesgue donne à la théorie des séries de Fourier son cadre définitif en introduisant une nouvelle théorie de l'intégration . Dans une série de publications qui s'étalent de 1902 à 1910 , il étend les théorèmes de ses prédécesseurs, notamment le théorème de Riemann sur la limite des séries de Fourier . Il prouve également plusieurs théorèmes de convergence nouveaux. La plupart de ses résultats figurent dans ses Leçons sur les séries trigonométriques publiées en 1906 .
+
+En 1907 , Pierre Fatou démontre l' égalité de Parseval dans le cadre général des fonctions de carré sommable . La même année, Frigyes Riesz et Ernst Sigismund Fischer , de façon indépendante, prouvent la réciproque. Ces résultats participent à la naissance d'un domaine nouveau, l' analyse fonctionnelle .
+
+Dorénavant, les questions de convergence dans les espaces fonctionnels sont envisagées à travers l'étude des propriétés des suites de noyaux et des opérateurs associés. Une grande partie des résultats passe par des questions d'estimation de normes appelées constantes de Lebesgue , qui deviennent un objet d'étude systématique.
+
+Parallèlement, le problème de la convergence simple des séries de Fourier donne lieu à plusieurs coups de théâtre avec la publication de résultats qui ont connu un grand retentissement et surpris les contemporains. En 1926 , Andreï Kolmogorov construit un exemple de fonction intégrable dont la série de Fourier diverge partout 6 . En 1966 , Lennart Carleson établit au contraire 7 que la série de Fourier d'une fonction de carré sommable converge presque partout vers cette fonction. D'autres résultats ( Kahane et Katznelson 1966 8 , Hunt 1967) viennent compléter l'étude. Les recherches se portent ensuite sur la convergence des séries de Fourier à plusieurs dimensions, encore imparfaitement connue.
+
+La définition des coefficients de Fourier porte sur les fonctions périodiques intégrables au sens de Lebesgue sur une période. Pour une fonction périodique, être de classe implique l'intégrabilité. Ceci comprend en particulier les fonctions continues, ou continues par morceaux, périodiques. On reprend ici les notations du premier paragraphe.
+
+Les coefficients de Fourier (complexes) de (pour ) sont donnés par :
+
+Par périodicité de l'intégrande, ces coefficients peuvent également être calculés en considérant l'intégrale sur n'importe quel segment de longueur . Le coefficient est la valeur moyenne de . En particulier, le coefficient n'est autre que la valeur moyenne de .
+
+Si , on appelle harmonique de rang et note la fonction sinusoïdale de fréquence obtenue en tenant compte des coefficients de Fourier d'indice et , donnée par :
+
+La série de Fourier, , est la série de fonctions obtenue en sommant les harmoniques successifs jusqu'au rang , soit :
+
+ou encore :
+
+Une des questions auxquelles répond la théorie de Fourier est de déterminer le mode de convergence de cette série ( convergence ponctuelle , convergence uniforme , convergence quadratique …).
+
+Si la fonction est à valeurs réelles, il peut être intéressant de manipuler des coefficients réels, notamment dans le cas de fonctions paires ou impaires. On définit ainsi 9 les coefficients de Fourier réels de :
+
+L' harmonique de rang se réécrit alors comme la fonction :
+
+où et, si , et .
+
+La convention suivante peut aussi être choisie 10 pour :
+
+ce qui ne s'interprète plus alors comme une valeur moyenne, mais en est le double. Cette dernière convention harmonise les définitions des coefficients qui commencent alors tous par .
+
+Les systèmes de coefficients pour positif et pour entier relatif sont liés linéairement par les relations suivantes pour :
+
+Ces identités restent vraies pour sous la convention du coefficient en .
+
+La parité d'une fonction se traduit sur les coefficients de Fourier :
+
+La série de Fourier, , est alors la série de fonctions :
+
+Lorsque augmente, la série approche , selon une signification mathématique à spécifier, la fonction (voir le paragraphe ci-après sur la reconstitution des fonctions et les animations fournies).
+
+Pour une fonction -périodique continue par morceaux, ou plus généralement de carré intégrable sur une période, l' égalité de Parseval affirme la convergence de la série suivante et l'identité :
+
+Ce résultat est équivalent à une convergence en moyenne quadratique des séries de Fourier correspondantes (voir ci-dessous).
+
+L'égalité de Parseval implique en particulier que les coefficients de Fourier de tendent (suffisamment vite) vers 0 en l'infini. Suivant les hypothèses de régularité sur , la vitesse de convergence peut être précisée (voir ci-dessous). Avec les notations utilisées ci-dessus, on a donc :
+
+Pour une fonction continue et par morceaux, on établit, par intégration par parties :
+
+Plus généralement, pour une fonction de classe et par morceaux , on établit :
+
+Les coefficients de Fourier caractérisent la fonction : deux fonctions ayant les mêmes coefficients de Fourier sont égales presque partout . Notamment, dans le cas continu par morceaux , elles coïncident en tous les points de sauf un nombre fini.
+
+Un certain nombre de résultats relient régularité de la fonction et comportement à l'infini des coefficients de Fourier :
+
+Une des questions centrales de la théorie est celle du comportement de la série de Fourier d'une fonction et en cas de convergence de l'égalité de sa somme avec la fonction initialement considérée, ceci dans le but de pouvoir remplacer l'étude de la fonction elle-même par celle de sa série de Fourier, qui autorise des opérations analytiques aisément manipulables. Sous des hypothèses de régularité convenables, une fonction périodique peut effectivement se décomposer comme somme de fonctions sinusoïdales.
+
+Pour une fonction périodique de période , continue en un réel , et dérivable à droite et à gauche en , le théorème de Dirichlet affirme la convergence de sa série de Fourier évaluée en et donne l'égalité :
+
+Si est à valeurs réelles, l'égalité ci-dessus se réécrit avec les coefficients de Fourier réels :
+
+Les hypothèses peuvent être affaiblies. La fonction peut seulement être continue à gauche et à droite en et à variation bornée sur un voisinage de . Dans ce cas, doit être remplacé par la valeur moyenne de en , soit donc la moyenne entre ses limites à droite et à gauche en : . La démonstration du théorème se base sur le fait que la série de Fourier se calcule par produit de convolution avec un polynôme trigonométrique aux propriétés remarquables : le noyau de Dirichlet .
+
+Le critère de Dini est un résultat plus puissant sur la convergence ponctuelle d'une série de Fourier : si une fonction périodique est telle que la fonction est localement intégrable sur un voisinage de 0, alors la série de Fourier de converge vers 0 en . Ainsi, on peut en déduire un résultat contraposé intéressant : si est une fonction continue positive telle que n'est pas localement intégrable près de 0, il existe une fonction continue telle que et dont la série de Fourier ne converge pas en 0 11 , 12 .
+
+Le théorème de convergence normale de Dirichlet est une version globale du théorème de convergence ponctuelle. Pour une fonction -périodique et continûment dérivable au voisinage d'un segment , la série de Fourier de converge normalement (donc uniformément ) vers sur .
+
+(c'est-a-dire où est de longueur au moins ). Dans l' espace préhilbertien des fonctions continues et -périodiques avec le produit scalaire , les ondes pures forment une famille orthonormée. L' inégalité de Bessel appliquée à montre alors L'effet de la dérivation sur les coefficients implique ainsi , puis l' inégalité de Cauchy-Schwarz et la sommabilité de entraînent
+
+En particulier, la série de Fourier d'une fonction -périodique, continûment dérivable par morceaux et continue, converge uniformément sur vers la fonction. Un contrôle de la convergence des séries de Fourier des fonctions régulières est donné par l' inégalité de Jackson et le théorème de Bernstein .
+
+Le phénomène de Gibbs est un effet de bord observé au voisinage d'une discontinuité de la fonction. Pour l'illustrer, voici la représentation des termes d'ordre 10, 50 et 250 de la série de Fourier de la fonction « créneau ».
+
+Le polynôme trigonométrique -ième terme de la série de Fourier, , est une fonction continue, il est donc normal qu'il ne puisse approcher uniformément la fonction créneau qui, elle, ne l'est pas. Sur une des zones de « plateau », en dehors d'un voisinage de la discontinuité, cependant, la série de Fourier converge uniformément vers la fonction (elle en est indiscernable sur le dernier graphique).
+
+Au niveau du point de discontinuité, subit une forte oscillation , une sorte de « sursaut ». Les images laissent soupçonner et le calcul montre effectivement que l'amplitude de ce sursaut tend vers une constante. Précisément si la fonction a une discontinuité d'amplitude , alors tout en restant continue, connaîtra un « sursaut » en ordonnée valant de l'ordre de 9 % du « saut » (la différence entre le niveau haut et le niveau bas) ou 18 % de l'amplitude (différence entre le niveau moyenne et la valeur crête, la moitié du saut).
+
+La convergence en moyenne quadratique concerne la convergence pour la norme hermitienne :
+
+Cette norme est définie par exemple sur l' espace vectoriel des fonctions -périodiques et continues, ou sur l'espace des fonctions -périodiques mesurables de carré intégrable identifiées modulo égalité sur un ensemble négligeable ; c'est d'ailleurs la périodicité qui permet de donner l'égalité des deux normes. La norme provient du produit scalaire hermitien :
+
+L'espace est dense dans l'espace et l'espace normé est complet ; il peut être obtenu comme le complété de .
+
+Introduisons la fonction exponentielle complexe d'indice :
+
+La famille forme une famille orthonormale donc libre . L' espace qu'elle engendre est l'espace des polynômes trigonométriques, sous-espace de . Le -ième coefficient de Fourier de est le produit scalaire de par :
+
+ce qui correspond bien à la définition des coefficients donnée en début d'article :
+
+En particulier, le -ième polynôme trigonométrique de est la projection orthogonale de sur l'espace engendré par .
+
+Une conséquence est l' égalité de Parseval .
+
+Le théorème de Fejér consiste à améliorer la convergence donnée par le théorème de convergence uniforme de Dirichlet en effectuant une limite de Cesàro des sommes partielles de la série de Fourier. Pour une fonction continue et -périodique, on note :
+
+Le théorème de Fejér affirme que, sous la seule hypothèse de continuité, la suite des fonctions converge uniformément vers .
+
+Ce théorème de Fejér constitue une démonstration possible de la version trigonométrique du théorème de Stone-Weierstrass . Il se démontre en utilisant les propriétés d'un polynôme trigonométrique particulier : le noyau de Fejér d'indice est positif et la suite de ces noyaux constitue une approximation de l'identité .
+
+Le polynôme trigonométrique admet des fréquences s'étalant de à . Pour chaque fréquence, le coefficient précédent est modifié. Les nouveaux coefficients tendent à donner plus d'importance aux petites fréquences et à amortir les termes de fréquence élevée, ce qui permet de lisser les comportements trop brusques.
+
+Les résultats positifs obtenus en envisageant d'autres modes de convergence ne font pas perdre sa pertinence à l'étude de la convergence simple.
+
+Dans le cadre des fonctions continues, le théorème de Fejér permet d'affirmer que si la série de Fourier de converge simplement, alors elle admet pour limite la fonction . En revanche des considérations d' analyse fonctionnelle permettent de prouver qu'il existe une fonction continue dont la série de Fourier diverge en au moins un point : précisément, il s'agit d'une application du théorème de Banach-Steinhaus à l'opérateur de convolution par la fonction noyau de Dirichlet . Il est également possible d'en donner des exemples explicites simples. C'est ainsi le cas de la fonction 2π-périodique définie par :
+
+Les domaines de divergence possibles sont connus grâce à deux théorèmes complémentaires :
+
+Si l'on élargit le cadre aux fonctions intégrables sur une période :
+
+L'application des théorèmes de Dirichlet et de Parseval, précédemment énoncés, permettent de calculer la valeur exacte de la somme de séries numériques remarquables, parmi lesquelles :
+
+Pour périodique de période , valant si 13 :
+
+En prenant d'autres fonctions, telles que :
+
+on retrouve d'autres formules similaires, telles que les formules annoncées pour , , , etc.
+
+Les séries trigonométriques peuvent être employées, comme les séries entières , pour rechercher les solutions de certaines équations différentielles linéaires .
+
+La méthode de séparation des variables pour une équation aux dérivées partielles consiste à en chercher des solutions sous forme de produit de fonctions d'une seule variable. Lorsque cette méthode s'applique, chacune de ces fonctions vérifie une équation différentielle linéaire et des conditions aux limites. Ainsi, pour le problème des cordes vibrantes :
+
+La variable est le temps, est une coordonnée d'espace comprise entre deux valeurs 0 et 1 qui représentent les points d'attache de la corde. La fonction donne la position de la corde à tout moment. La fonction donne sa position initiale, la distribution initiale des vitesses.
+
+On peut trouver des fonctions satisfaisant et qui sont de la forme . Par superposition, on trouve l'expression générale de la solution :
+
+où les coefficients et sont ceux qu'on obtient en décomposant et en série de Fourier.
+
+Plus généralement, la théorie de Sturm-Liouville permet de traiter les problèmes de séparation de variables de façon très similaire en donnant l'existence d'une base hilbertienne jouant le même rôle que la famille des fonctions trigonométriques élémentaires.
+
+Le problème de Dirichlet sur un disque est un autre exemple classique d'emploi des séries de Fourier. Il consiste à déterminer les fonctions harmoniques sur le disque (ouvert) ayant une valeur limite fixée au bord. Physiquement, il s'interprète comme la recherche d'un profil de température à l'équilibre, les valeurs sur le bord du disque étant imposées. Si on suppose qu'il s'agit du disque unité, en employant les coordonnées polaires , la fonction donnant le profil de température imposé est , supposée continue et périodique. Elle admet des coefficients de Fourier et . Alors la fonction suivante donne la solution sur le disque :
+
+Le fait que la limite lorsque tend vers 1 soit égale à , avec convergence uniforme, est une application du procédé de sommation d'Abel .
+
+L'analyse de Fourier permet de donner des expressions nouvelles pour l'opération de dérivation, et d'en tirer des estimées intéressantes.
+
+Ainsi l' inégalité de Wirtinger s'applique à une fonction de classe , -périodique et de valeur moyenne nulle. Elle compare les normes de et de sa dérivée (normes de la convergence en moyenne quadratique) :
+
+Ce résultat peut servir à son tour à établir le théorème isopérimétrique : le cercle est la courbe fermée enserrant un domaine connexe d'aire maximale pour une longueur donnée.
+
+Un autre exemple d'application est l' inégalité de Bernstein . Celle-ci s'applique à une fonction de la forme suivante :
+
+avec des coefficients complexes et des coefficients réels (ce n'est donc pas nécessairement un polynôme trigonométrique) et distincts. L'inégalité permet de comparer cette fois les bornes supérieures de et de sa dérivée :
+
+La démonstration de l'inégalité de Bernstein repose sur l'écriture de comme une combinaison infinie de translatées de , à l'aide d'une formule d'analyse de Fourier.
+
+Les séries de Fourier se définissent plus généralement pour les distributions périodiques. Une distribution est par définition une forme linéaire sur un espace de fonctions. est dite -périodique lorsque sa valeur sur une fonction test est la même que sur sa -translatée. Dans ce cas, il existe une distribution à support compact telle que est la somme de la série suivante au sens des distributions :
+
+Les coefficients de Fourier de sont alors définis comme suit :
+
+Ces coefficients ne dépendent pas du choix de . Ils sont « à croissance lente », c'est-à-dire dominés par une expression polynomiale.
+
+La série de Fourier converge vers au sens des distributions :
+
+ce qui prouve que la transformation de Fourier est injective sur les distributions -périodiques, et à fortiori sur les fonctions localement intégrables -périodiques.
+
+Réciproquement, si l'on considère une suite à croissance lente, la série trigonométrique correspondante converge au sens des distributions vers une distribution périodique. Un exemple d'utilisation est le peigne de Dirac .
+
+Les espaces de Hilbert sont les espaces vectoriels munis d'un produit scalaire et qui sont complets pour la norme associée. L'espace des fonctions -périodiques, de carré sommable, identifiées par la relation d'égalité presque partout , possède une structure de ce type. L'identité de Parseval et théorème de Riesz-Fischer montrent que les fonctions trigonométriques élémentaires forment une base hilbertienne, et les coordonnées d'une fonction sont données par ses coefficients de Fourier.
+
+Tout espace de Hilbert séparable et de dimension infinie est muni d'une telle base, et l'application qui à un élément de l'espace associe ses coefficients (encore appelés « coefficients de Fourier ») est une isométrie de dans l' espace .
+
+Il est possible d'envisager également des espaces de Hilbert non séparables, ainsi il existe des coefficients de Fourier-Bohr pour les fonctions presque périodiques . On ne pose alors plus de conditions sur le rapport de fréquences pour les fonctions trigonométriques de référence.
+
+La décomposition en séries de Fourier est également généralisée aux fonctions non périodiques avec la théorie de la transformée de Fourier et la notion de densité spectrale . Pour une présentation élémentaire, voir Analyse spectrale .
+
+Série et transformation de Fourier sont reliées par la formule sommatoire de Poisson .
+
+Sur les autres projets Wikimedia :
+

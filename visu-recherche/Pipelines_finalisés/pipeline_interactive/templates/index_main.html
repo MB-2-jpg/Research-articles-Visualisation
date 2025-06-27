@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>        Visualisation données S²A  </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("/static/background2.png");
+
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .middle-image {
+      position: absolute;
+      top: -200px;
+      left: 140px;
+      
+      width: 50%;
+      opacity: 0.9;
+      z-index: 1.5; /* Between background (z=0) and content (z=2) */
+      pointer-events: none; /* Allows clicks to pass through */
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.693);
+      position: relative;
+      top: 250px;
+      left: 100px;
+      padding: 40px;
+      margin: 470px auto;
+      width: 600px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    label, input, button {
+      display: block;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 44px;
+      background-color: #622c08;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 23px;
+    }
+
+    .keywords label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src= "/static/background22.png" class="middle-image" alt="Decorative Image">
+    <center>
+      <h2>Visualisation Données S2A</h2>
+    </center>
+    
+
+   <form action="/lancer_graphe" method="POST">
+   <button href="/lancer_graphe" id="visualiserGraphe">Découvrerte intéractive des relations entre thèmes , articles , auteurs .. (Visualisation par graphe)</button>
+   </form>
+   <button href="/visualiserTopics"  id="visualiserTopics"> Découverte intéractive des thèmes de rechercherche de l'équipe par Topic Modeling</button>
+   <button  href="/visualiserANC"   id="visualiserANC">Découverte intéractive du domaine de publication de chaque auteur par ue analyse par correspondance</button>
+  
+  
+  </div>
+
+<script>
+    console.log("Script chargé");
+
+    document.getElementById("visualiserGraphe").addEventListener("click", function () {
+        console.log("Bouton1 cliqué !");
+        // le reste du code ici...
+    });
+    document.getElementById("visualiserGraphe").addEventListener("click", function () {
+    
+
+    fetch("/lancer_graphe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+         
+        })
+    })
+    .then(response => {
+        if (!response.ok) throw new Error("Erreur serveur");
+        return response.blob();
+    })
+   
+});
+
+   document.getElementById("visualiserTopics").addEventListener("click", function () {
+        console.log("Bouton2 cliqué !");
+        window.location.href = "/visualiserTopics";
+    });
+
+
+
+
+
+document.getElementById("visualiserANC").addEventListener("click", function () {
+        console.log("Bouton3 cliqué !");
+        // le reste du code ici...
+    });
+    document.getElementById("visualiserANC").addEventListener("click", function () {
+    
+
+    fetch("/visualiserANC", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+        })
+    })
+   
+
+    fetch("/visualiser3", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+        })
+    })})
+    
+
+</script>
+
+
+</body>
+</html>
